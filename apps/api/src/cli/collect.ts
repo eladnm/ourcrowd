@@ -16,7 +16,10 @@ export async function runCollect(options: { days?: number; limit?: number } = {}
   const companies = loadCompanies();
   const targets = options.limit ? companies.slice(0, options.limit) : companies;
 
-  log.step(`Collecting news for ${targets.length} companies (last ${windowDays} days)`);
+  log.step(
+    `Collecting news for ${targets.length} ${targets.length === 1 ? 'company' : 'companies'} ` +
+      `(last ${windowDays} ${windowDays === 1 ? 'day' : 'days'})`,
+  );
   const runId = startRun('collect');
 
   const { mentions, errors } = await collectAll(targets, { windowDays });
