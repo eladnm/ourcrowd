@@ -91,7 +91,7 @@ mentions, labels and per-company status without running anything.
 | `pnpm collect` | Collect only. `--days 90`, `--limit 10` |
 | `pnpm classify` | Label pending mentions. `--since 30`, `--limit 20`, `--relabel` |
 | `pnpm alert` | The daily job: collect 2 days, classify, alert. `--dry-run` |
-| `pnpm export` | Rewrite `data/*.json` and `data/*.csv` from the database |
+| `pnpm export` | Rewrite `data/*.json` and `data/*.csv` from the database. `--force` |
 | `pnpm api` | Serve the API + built dashboard on :4000 |
 | `pnpm --filter @ourcrowd/dashboard dev` | Dashboard dev server on :3000 |
 | `pnpm --filter @ourcrowd/api eval` | Classification spot-check (see below) |

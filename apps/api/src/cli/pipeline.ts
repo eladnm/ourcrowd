@@ -10,6 +10,7 @@
  * collected, rather than picking up the whole stored backlog.
  */
 import { log } from '../lib/logger.ts';
+import { AlreadyReportedError } from '../lib/errors.ts';
 import { parseArgs } from '../lib/args.ts';
 import { runCollect } from './collect.ts';
 import { runClassify } from './classify.ts';
@@ -32,7 +33,7 @@ async function main() {
     // a full run should still sweep up anything left over from before.
     companyIds: args.limit === undefined ? undefined : collected.companyIds,
   });
-  await runExport();
+  await runExport(new Date(), { force: process.argv.includes('--force') });
 
   const minutes = ((Date.now() - startedAt) / 60_000).toFixed(1);
   log.step(`Pipeline finished in ${minutes} min`);
@@ -40,6 +41,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  log.error(String(error));
+  if (!(error instanceof AlreadyReportedError)) log.error(String(error));
   process.exit(1);
 });

@@ -24,7 +24,11 @@ export const config = {
     ? resolve(ROOT, process.env.DATABASE_PATH)
     : resolve(ROOT, 'data/press.db'),
   companiesPath: resolve(ROOT, 'data/companies.json'),
-  exportDir: resolve(ROOT, 'data'),
+  // Configurable so a run against a scratch DATABASE_PATH can write its
+  // exports somewhere else, instead of overwriting the committed data/ files.
+  exportDir: process.env.EXPORT_DIR
+    ? resolve(ROOT, process.env.EXPORT_DIR)
+    : resolve(ROOT, 'data'),
   port: num(process.env.PORT, 4000),
   alert: {
     channel: (process.env.ALERT_CHANNEL ?? 'console') as 'console' | 'webhook' | 'both',

@@ -9,6 +9,7 @@
  * makes an alert "new" is alerted_at being NULL, not the publication date.
  */
 import { log } from '../lib/logger.ts';
+import { AlreadyReportedError } from '../lib/errors.ts';
 import { parseArgs } from '../lib/args.ts';
 import { sendAlert } from '../alert/index.ts';
 import { runCollect } from './collect.ts';
@@ -47,7 +48,7 @@ export async function runDailyAlert(options: { dryRun?: boolean; skipCollect?: b
 if (import.meta.filename === process.argv[1]) {
   const args = parseArgs(process.argv.slice(2));
   runDailyAlert({ dryRun: args.dryRun }).catch((error) => {
-    log.error(String(error));
+    if (!(error instanceof AlreadyReportedError)) log.error(String(error));
     process.exit(1);
   });
 }

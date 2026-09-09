@@ -3,13 +3,20 @@
  *
  * This is deliverable #5: the output of a successful run, committed so a
  * reviewer can inspect results without re-running the pipeline.
+ *
+ *   pnpm export             # write data/*.json and data/*.csv
+ *   pnpm export -- --force  # allow replacing a populated export with an empty one
+ *
+ * Set EXPORT_DIR to write somewhere other than data/ — useful when running
+ * against a scratch DATABASE_PATH.
  */
-import { writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, relative } from 'node:path';
 import { computeCompanyStatus, quarterStart } from '@ourcrowd/core';
 import type { CompanyStatus, Mention } from '@ourcrowd/core';
-import { config } from '../config.ts';
+import { config, ROOT } from '../config.ts';
 import { log } from '../lib/logger.ts';
+import { AlreadyReportedError } from '../lib/errors.ts';
 import { getClassifiedMentions, getCompanies, getStats } from '../store/db.ts';
 
 /** RFC 4180 quoting: wrap in quotes and double any embedded quote. */
@@ -22,10 +29,54 @@ function toCsv(headers: string[], rows: unknown[][]): string {
   return [headers.join(','), ...rows.map((row) => row.map(csvCell).join(','))].join('\n') + '\n';
 }
 
-export async function runExport(now: Date = new Date()) {
+/**
+ * Refuse to replace a populated export with an empty one unless asked.
+ *
+ * Easy to trip over: point DATABASE_PATH at a scratch database, run export,
+ * and the committed data/ deliverable is silently replaced with zero rows.
+ * Overwriting real results should be a deliberate act.
+ */
+export function checkEmptyOverwrite(
+  exportDir: string,
+  mentionCount: number,
+  force: boolean,
+): number | null {
+  if (mentionCount > 0 || force) return null;
+
+  const existing = join(exportDir, 'mentions.json');
+  if (!existsSync(existing)) return null;
+
+  let previous: number;
+  try {
+    const parsed = JSON.parse(readFileSync(existing, 'utf8')) as unknown;
+    if (!Array.isArray(parsed)) return null;
+    previous = parsed.length;
+  } catch {
+    return null; // Unreadable or not JSON: nothing worth protecting.
+  }
+
+  return previous > 0 ? previous : null;
+}
+
+function guardEmptyOverwrite(mentionCount: number, force: boolean): void {
+  const atRisk = checkEmptyOverwrite(config.exportDir, mentionCount, force);
+  if (atRisk === null) return;
+
+  log.error(
+    `Refusing to overwrite ${atRisk} exported mentions with an empty export.\n` +
+      `  The database at ${config.databasePath} has no classified mentions.\n` +
+      '  Run `pnpm classify` first, or pass --force to export anyway,\n' +
+      '  or set EXPORT_DIR to write somewhere other than data/.',
+  );
+  throw new AlreadyReportedError('refused to write an empty export');
+}
+
+export async function runExport(now: Date = new Date(), options: { force?: boolean } = {}) {
   const companies = getCompanies();
   const mentions = getClassifiedMentions();
   const stats = getStats();
+
+  guardEmptyOverwrite(mentions.length, options.force ?? false);
 
   const mentionsByCompany = new Map<string, Mention[]>();
   for (const mention of mentions) {
@@ -107,7 +158,7 @@ export async function runExport(now: Date = new Date()) {
     ),
   );
 
-  log.step('Exported to data/');
+  log.step(`Exported to ${relative(ROOT, config.exportDir) || '.'}/`);
   log.info(`  mentions.json / .csv       ${mentions.length} rows`);
   log.info(`  company-status.json / .csv ${statuses.length} rows`);
   log.info(`  run-summary.json`);
@@ -116,8 +167,9 @@ export async function runExport(now: Date = new Date()) {
 }
 
 if (import.meta.filename === process.argv[1]) {
-  runExport().catch((error) => {
-    log.error(String(error));
+  const force = process.argv.slice(2).includes('--force');
+  runExport(new Date(), { force }).catch((error) => {
+    if (!(error instanceof AlreadyReportedError)) log.error(String(error));
     process.exit(1);
   });
 }

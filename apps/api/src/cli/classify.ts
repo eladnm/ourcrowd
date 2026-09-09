@@ -15,6 +15,7 @@ import { checkOllama } from '../classify/ollama.ts';
 import { config } from '../config.ts';
 import { log } from '../lib/logger.ts';
 import { parseArgs } from '../lib/args.ts';
+import { AlreadyReportedError } from '../lib/errors.ts';
 import {
   clearClassifications,
   finishRun,
@@ -35,8 +36,10 @@ export async function runClassify(
 ) {
   const health = await checkOllama();
   if (!health.ok) {
+    // The message already carries the install/pull guidance, so mark it as
+    // reported and let the entry point exit without printing a second line.
     log.error('Ollama is not ready:\n' + health.message);
-    throw new Error('Ollama unavailable');
+    throw new AlreadyReportedError('Ollama unavailable');
   }
   log.info(health.message);
 
@@ -107,7 +110,7 @@ if (import.meta.filename === process.argv[1]) {
     relabelAll: args.relabelAll,
     relabelBefore: args.relabelBefore,
   }).catch((error) => {
-    log.error(String(error));
+    if (!(error instanceof AlreadyReportedError)) log.error(String(error));
     process.exit(1);
   });
 }

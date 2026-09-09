@@ -90,11 +90,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 9,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 6,
       "negative": 0,
-      "neutral": 1
+      "neutral": 3
     }
   },
   {
@@ -132,11 +132,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 2,
-      "neutral": 0
+      "negative": 3,
+      "neutral": 1
     }
   },
   {
@@ -188,11 +188,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 8,
+    "quarterMentionCount": 14,
     "sentimentBreakdown": {
-      "positive": 6,
-      "negative": 2,
-      "neutral": 0
+      "positive": 7,
+      "negative": 6,
+      "neutral": 1
     }
   },
   {
@@ -230,10 +230,10 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 8,
+    "quarterMentionCount": 16,
     "sentimentBreakdown": {
-      "positive": 5,
-      "negative": 2,
+      "positive": 8,
+      "negative": 7,
       "neutral": 1
     }
   },
@@ -244,11 +244,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 16,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 1
+      "neutral": 16
     }
   },
   {
@@ -282,13 +282,13 @@
   {
     "companyId": "biscience",
     "companyName": "BIScience",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T07:00:00.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -342,10 +342,10 @@
     "daysSinceLastMention": 2,
     "status": "active",
     "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 0,
-      "negative": 0,
+      "positive": 1,
+      "negative": 2,
       "neutral": 1
     }
   },
@@ -436,14 +436,14 @@
   {
     "companyId": "bizzabo",
     "companyName": "Bizzabo",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T12:37:00.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
+      "negative": 1,
       "neutral": 0
     }
   },
@@ -594,11 +594,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 14,
+    "quarterMentionCount": 23,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 14
+      "neutral": 23
     }
   },
   {
@@ -622,11 +622,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 0
+      "neutral": 2
     }
   },
   {
@@ -646,13 +646,13 @@
   {
     "companyId": "cerebras",
     "companyName": "Cerebras",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T14:03:17.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -678,9 +678,9 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 8,
       "negative": 0,
       "neutral": 0
     }
@@ -717,14 +717,14 @@
     "companyId": "connected-energy",
     "companyName": "Connected Energy",
     "lastMentionedAt": "2026-09-08T06:39:04.000Z",
-    "daysSinceLastMention": 0,
+    "daysSinceLastMention": 1,
     "status": "active",
-    "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "label": "last mentioned yesterday",
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 3,
       "negative": 0,
-      "neutral": 1
+      "neutral": 3
     }
   },
   {
@@ -818,11 +818,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 12,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 7,
       "negative": 0,
-      "neutral": 3
+      "neutral": 5
     }
   },
   {
@@ -870,27 +870,27 @@
   {
     "companyId": "cyfirma",
     "companyName": "Cyfirma",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T04:42:54.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 0
+      "positive": 1,
+      "negative": 1,
+      "neutral": 1
     }
   },
   {
     "companyId": "cytoreason",
     "companyName": "CytoReason",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T12:33:04.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -930,9 +930,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 0
     }
@@ -1070,25 +1070,25 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 11,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 1,
-      "neutral": 3
+      "negative": 7,
+      "neutral": 4
     }
   },
   {
     "companyId": "fireblade",
     "companyName": "Fireblade",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T07:45:35.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1206,13 +1206,13 @@
   {
     "companyId": "glean",
     "companyName": "Glean",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T13:00:16.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -1234,15 +1234,15 @@
   {
     "companyId": "greenlight",
     "companyName": "Greenlight",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T18:39:19.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1252,9 +1252,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -1262,15 +1262,15 @@
   {
     "companyId": "guild",
     "companyName": "Guild",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T22:31:19.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1318,15 +1318,15 @@
   {
     "companyId": "harbinger-motors",
     "companyName": "Harbinger Motors",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T19:23:15.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1336,11 +1336,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 1
+      "neutral": 0
     }
   },
   {
@@ -1430,41 +1430,41 @@
   {
     "companyId": "innoviz",
     "companyName": "Innoviz",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T05:03:06.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
+      "negative": 1,
       "neutral": 0
     }
   },
   {
     "companyId": "insidetracker",
     "companyName": "InsideTracker",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T13:45:00.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
     "companyId": "insightec",
     "companyName": "Insightec",
     "lastMentionedAt": "2026-09-08T07:00:00.000Z",
-    "daysSinceLastMention": 0,
+    "daysSinceLastMention": 1,
     "status": "active",
-    "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "label": "last mentioned yesterday",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -1560,9 +1560,9 @@
     "daysSinceLastMention": 2,
     "status": "active",
     "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 5,
       "negative": 0,
       "neutral": 1
     }
@@ -1640,15 +1640,15 @@
   {
     "companyId": "klook",
     "companyName": "Klook",
-    "lastMentionedAt": "2026-09-07T02:20:00.000Z",
-    "daysSinceLastMention": 2,
+    "lastMentionedAt": "2026-09-04T20:45:12.000Z",
+    "daysSinceLastMention": 4,
     "status": "active",
-    "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 4,
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
-      "neutral": 3
+      "neutral": 1
     }
   },
   {
@@ -1710,29 +1710,29 @@
   {
     "companyId": "launchpad",
     "companyName": "Launchpad",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T21:15:03.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
     "companyId": "lemonade",
     "companyName": "Lemonade",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T00:32:00.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1742,11 +1742,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1808,13 +1808,13 @@
   {
     "companyId": "mst",
     "companyName": "MST",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T23:07:01.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -1854,11 +1854,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 10,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 5,
       "negative": 0,
-      "neutral": 4
+      "neutral": 5
     }
   },
   {
@@ -2092,11 +2092,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 6,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 5,
+      "positive": 3,
       "negative": 0,
-      "neutral": 1
+      "neutral": 0
     }
   },
   {
@@ -2204,9 +2204,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 9,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 9,
       "negative": 0,
       "neutral": 0
     }
@@ -2228,13 +2228,13 @@
   {
     "companyId": "ordergroove",
     "companyName": "Ordergroove",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T14:30:00.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -2260,11 +2260,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 1
+      "neutral": 2
     }
   },
   {
@@ -2284,15 +2284,15 @@
   {
     "companyId": "overtime",
     "companyName": "Overtime",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T18:05:00.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2330,9 +2330,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 3
     }
@@ -2456,11 +2456,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 1
+      "neutral": 2
     }
   },
   {
@@ -2554,23 +2554,23 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 4,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
     "companyId": "ride-vision",
     "companyName": "Ride Vision",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T12:05:04.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -2634,13 +2634,13 @@
   {
     "companyId": "scale-ai",
     "companyName": "Scale AI",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T07:00:00.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -2788,15 +2788,15 @@
   {
     "companyId": "silo",
     "companyName": "Silo",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T12:56:21.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2816,15 +2816,15 @@
   {
     "companyId": "skillz",
     "companyName": "Skillz",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T18:09:32.000Z",
+    "daysSinceLastMention": 6,
+    "status": "active",
+    "label": "last mentioned 6 days ago",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
-      "neutral": 0
+      "negative": 1,
+      "neutral": 1
     }
   },
   {
@@ -2848,11 +2848,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 6,
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
-      "positive": 4,
+      "positive": 5,
       "negative": 2,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2876,11 +2876,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 4,
       "negative": 1,
-      "neutral": 0
+      "neutral": 2
     }
   },
   {
@@ -2900,15 +2900,15 @@
   {
     "companyId": "stellar-cyber",
     "companyName": "Stellar Cyber",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-03T16:10:29.000Z",
+    "daysSinceLastMention": 5,
+    "status": "active",
+    "label": "last mentioned 5 days ago",
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
-      "neutral": 0
+      "neutral": 2
     }
   },
   {
@@ -2918,11 +2918,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 44,
+    "quarterMentionCount": 47,
     "sentimentBreakdown": {
       "positive": 42,
-      "negative": 1,
-      "neutral": 1
+      "negative": 3,
+      "neutral": 2
     }
   },
   {
@@ -2942,14 +2942,14 @@
   {
     "companyId": "stripe",
     "companyName": "Stripe",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T20:56:59.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 0,
-      "negative": 0,
+      "positive": 2,
+      "negative": 4,
       "neutral": 0
     }
   },
@@ -3012,15 +3012,15 @@
   {
     "companyId": "tabnine",
     "companyName": "Tabnine",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-02T07:00:00.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -3184,11 +3184,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 15,
     "sentimentBreakdown": {
-      "positive": 1,
-      "negative": 0,
-      "neutral": 1
+      "positive": 12,
+      "negative": 1,
+      "neutral": 2
     }
   },
   {
@@ -3240,11 +3240,11 @@
     "daysSinceLastMention": 2,
     "status": "active",
     "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -3390,13 +3390,13 @@
   {
     "companyId": "wave",
     "companyName": "Wave",
-    "lastMentionedAt": "2026-09-06T23:19:20.000Z",
-    "daysSinceLastMention": 2,
-    "status": "active",
-    "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 1,
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 0,
       "negative": 0,
       "neutral": 0
     }
@@ -3600,14 +3600,14 @@
   {
     "companyId": "xai",
     "companyName": "xAI",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-04T20:19:00.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
+      "negative": 8,
       "neutral": 0
     }
   }
