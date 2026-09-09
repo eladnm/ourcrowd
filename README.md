@@ -1,0 +1,346 @@
+# OurCrowd Press Monitor
+
+Monitors press coverage for OurCrowd portfolio and fund companies, classifies
+every mention's sentiment with a **locally hosted Ollama model**, and presents
+the results in a dashboard — with a daily alert when new coverage appears.
+
+Built for the OurCrowd take-home exercise. It tracks the **258 companies** in
+the supplied seed list.
+
+---
+
+## What it does
+
+1. **Quarterly press dashboard** — for each company, its press appearances over
+   the trailing 90 days, each labelled positive / negative / neutral and linked
+   back to the source article.
+2. **Current mention status** — how recently each company was last in the news
+   ("last mentioned 3 days ago", "last mentioned 45 days ago", "no coverage
+   found"), bucketed into active / recent / stale / dormant / none.
+3. **Daily alert** — a scheduled job that collects a narrow window, classifies
+   what is new, and sends an alert listing it. Negative coverage sorts first.
+
+---
+
+## Quick start
+
+Prerequisites: **Node.js ≥ 22** (for the built-in `node:sqlite`), **pnpm 10**,
+and **Ollama**.
+
+```bash
+# 1. Install Ollama and pull the model (~4.9 GB)
+#    macOS/Linux: curl -fsSL https://ollama.com/install.sh | sh
+#    Windows:     winget install Ollama.Ollama
+ollama serve            # leave running in its own terminal
+ollama pull llama3.1:8b
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Run the pipeline: collect the quarter, classify the last 30 days, export
+pnpm pipeline -- --since 30
+
+# 4. Build and serve the dashboard
+pnpm --filter @ourcrowd/dashboard build
+pnpm api                # http://localhost:4000
+```
+
+No API keys, no database server, no `.env` file required — every setting has a
+working default. `apps/api/.env.example` documents the knobs.
+
+### Just want to look at the results?
+
+The `data/` folder holds the output of a real run, so you can review the
+mentions, labels and per-company status without running anything.
+
+---
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `pnpm pipeline` | Collect → classify → export, end to end |
+| `pnpm pipeline -- --since 30` | Same, but only label coverage from the last 30 days |
+| `pnpm collect` | Collect only. `--days 90`, `--limit 10` |
+| `pnpm classify` | Label pending mentions. `--since 30`, `--limit 20` |
+| `pnpm alert` | The daily job: collect 2 days, classify, alert. `--dry-run` |
+| `pnpm export` | Rewrite `data/*.json` and `data/*.csv` from the database |
+| `pnpm api` | Serve the API + built dashboard on :4000 |
+| `pnpm --filter @ourcrowd/dashboard dev` | Dashboard dev server on :3000 |
+| `pnpm --filter @ourcrowd/api eval` | Classification spot-check (see below) |
+| `pnpm --filter @ourcrowd/api schedule` | Long-running in-process daily scheduler |
+| `pnpm test` | Unit tests |
+| `pnpm typecheck` | TypeScript across the workspace |
+
+Both `collect` and `classify` are **resumable**. Results are written as they
+land, deduped by mention id, so an interrupted run loses nothing and re-running
+picks up where it stopped.
+
+---
+
+## Architecture
+
+```
+apps/
+  api/                    Fastify API + all pipeline CLIs
+    src/collect/          Google News RSS collection
+    src/classify/         Ollama prompt, client, batch runner
+    src/store/            SQLite schema and queries
+    src/alert/            Console + webhook alert formatting
+    src/cli/              collect / classify / pipeline / alert / export / eval / schedule
+  dashboard/              React + Vite SPA
+packages/
+  core/                   Shared types + mention-status logic (used by both)
+data/                     Seed list and the committed output of a real run
+scripts/build-seed.mjs    Raw company list -> data/companies.json
+docs/AI_PROMPTS.md        The prompts used with AI coding assistants
+```
+
+**Flow:** `collect` fetches one RSS feed per company and inserts new mentions →
+`classify` sends each unlabelled mention to Ollama and stores the verdict →
+`export` writes JSON/CSV → the API computes status per request and the
+dashboard renders it.
+
+### Design decisions
+
+**Collection and classification are separate steps.** Collecting 258 companies
+takes ~7 minutes; classifying on a local model takes hours. Splitting them means
+a slow classifier never blocks collection, and either can be re-run alone.
+
+**Mention identity is a hash of company + normalized URL.** Tracking params are
+stripped and the host is lowercased before hashing, so the same article
+collected on two different days is one mention. The id is company-scoped on
+purpose: an article covering two portfolio companies is a mention for each.
+
+**"New" for alerting means `alerted_at IS NULL`, not "published today."** Feeds
+lag. An article published last week but first seen today is genuinely new to us,
+and one already alerted on yesterday must not fire twice.
+
+**Status is computed from relevant mentions only.** An irrelevant hit — a
+different company sharing the name — must not make a dormant company look
+active.
+
+**Shared status logic lives in `packages/core`.** The API and the dashboard
+derive "last mentioned N days ago" from the same functions, so they cannot drift.
+
+---
+
+## The local LLM
+
+### Model: `llama3.1:8b`
+
+Chosen because it is a good fit for this specific job:
+
+- **Reliable structured output.** It honours Ollama's `format: json` and the
+  requested schema consistently — important when classifying thousands of items
+  unattended.
+- **Runs on a normal laptop.** 4.9 GB, no GPU required.
+- **Strong enough at nuance.** Sentiment here is not tone analysis; the model
+  has to tell "rival raises $200M to take on Acme" (bad for Acme, upbeat tone)
+  from "Acme raises $200M". Smaller 3B models were noticeably weaker at that.
+
+Override with `OLLAMA_MODEL` — anything Ollama serves works. `qwen2.5:3b` is
+roughly 3× faster if you want to trade accuracy for speed.
+
+### How it is invoked
+
+`POST /api/chat` with `stream: false`, `format: 'json'`, `temperature: 0` (so a
+re-run reproduces the same labels), and `num_predict: 200`. The system prompt
+lives in [apps/api/src/classify/prompt.ts](apps/api/src/classify/prompt.ts).
+
+**One call does two jobs** — relevance *and* sentiment. A separate relevance
+pass would double round-trips for no measurable gain; the model needs the same
+context for both.
+
+**Relevance filtering matters here.** ~50 of the 258 companies have common-word
+names (Shield, Peak, Wave, Silo, Orchard, Guild, Near, Astra…). Two things
+handle that: `searchQuery` overrides narrow the feed query at collection time,
+and the model filters what still gets through. Filtered mentions stay in the
+database and are shown dimmed in the dashboard drawer, so the filter can be
+audited rather than trusted blindly.
+
+**Sentiment is scoped to the company, not the article.** The prompt pins this
+explicitly, because investors reading the dashboard care about the company's
+position, not the writer's mood.
+
+Expected output:
+
+```json
+{
+  "relevance": "relevant",
+  "sentiment": "positive",
+  "confidence": 0.9,
+  "reasoning": "one short sentence"
+}
+```
+
+Responses are parsed defensively: the first balanced JSON object is extracted
+(models occasionally wrap output in prose), every field is validated against the
+allowed values, and confidence is clamped to 0–1. **An invalid label is never
+stored** — the mention is left unclassified and retried on the next run. One
+malformed response triggers a single retry; a lost connection aborts the whole
+run rather than burning through the backlog with the same error.
+
+### How classification quality was validated
+
+`pnpm --filter @ourcrowd/api eval` runs the model over 10 hand-labelled cases
+in [apps/api/src/cli/eval.ts](apps/api/src/cli/eval.ts) and reports agreement.
+The cases deliberately cover the decisions that are easy to get wrong:
+
+- clear good news (funding round, record revenue, customer win)
+- clear bad news (layoffs, class-action lawsuit)
+- **the trap case** — positive-sounding coverage that is bad for the company
+  ("competitor secures major OEM deal, squeezing Arbe Robotics")
+- routine filler that should be neutral (conference appearance, stock roundup)
+- **name collisions that must be filtered** (Marvel's S.H.I.E.L.D. for "Shield",
+  the Apple TV+ series for "Silo")
+
+Alongside that, mentions from the real run were spot-checked by hand. The
+relevance filter behaved sensibly — for example it correctly marked a general
+"When the AI Breaks Its Own Rules" article as *irrelevant* to Morphisec while
+keeping two genuine Morphisec security posts as relevant and neutral.
+
+**This is a sanity check, not a benchmark.** Ten cases and an informal read of
+the output tell you the prompt is behaving; they do not give you a defensible
+accuracy figure. See the limitations below.
+
+---
+
+## News source: Google News RSS
+
+One RSS query per company against `news.google.com/rss/search`, with
+`when:{n}d` bounding the window server-side. Requests are sequential with a
+1.2 s delay and retry with exponential backoff.
+
+**Why:** no API key, no signup, no quota — a reviewer can clone and run it
+immediately. Paid APIs give cleaner data but put a signup between the reviewer
+and a working pipeline.
+
+**Limitations, honestly:**
+
+- **Headline + short snippet only.** No article body, so the model classifies
+  from roughly 200 characters. This is the single biggest constraint on
+  accuracy. Fetching and extracting article text would improve it materially.
+- **~100 items per query.** Well-covered companies (Anthropic, Databricks,
+  Lemonade, Cerebras…) hit that ceiling, so their quarter counts are floors,
+  not true totals.
+- **Google-wrapped redirect URLs.** Links resolve correctly in a browser but are
+  not the publisher's canonical URL, which makes cross-source dedupe weaker than
+  it would be with real URLs.
+- **No source quality weighting.** A tier-one outlet and a content-farm
+  aggregator count the same.
+- **Publication dates are the feed's.** Occasionally wrong or missing; items
+  with unparseable dates are skipped, and future-dated items never become a
+  company's "last mentioned".
+
+The collector is one module behind a plain interface
+([apps/api/src/collect/google-news.ts](apps/api/src/collect/google-news.ts)),
+so adding NewsAPI or Bing as a second provider is a contained change.
+
+---
+
+## Storage
+
+SQLite via **`node:sqlite`**, Node's built-in driver — no native compilation and
+nothing to install. (`better-sqlite3` was the first choice but needs a C++
+toolchain on Windows, exactly the setup friction this README is meant to avoid.)
+
+Three tables: `companies`, `mentions` (collection + classification columns, with
+`alerted_at` for alert bookkeeping), and `runs` for run history. The database
+lives at `data/press.db` and is gitignored; the reviewable snapshot is the
+exported JSON/CSV.
+
+---
+
+## The daily alert
+
+```bash
+pnpm alert              # collect 2 days, classify, alert on anything new
+pnpm alert -- --dry-run # print what would be sent, mark nothing as alerted
+```
+
+Console output is the default channel, so the alert is visible with zero setup.
+Set `ALERT_CHANNEL=webhook` (or `both`) plus `ALERT_WEBHOOK_URL` for a
+Slack-compatible webhook. Alerts group by company and **sort companies with
+negative coverage first** — that is what needs a human today.
+
+Scheduling, pick one:
+
+```bash
+# cron, 8am daily
+0 8 * * * cd /path/to/ourcrowd && pnpm alert >> alert.log 2>&1
+
+# Windows Task Scheduler
+schtasks /create /tn "OurCrowd Press Alert" /tr "pnpm alert" /sc daily /st 08:00
+
+# or an in-process scheduler, if you'd rather leave a process running
+pnpm --filter @ourcrowd/api schedule
+```
+
+Email was deliberately left out: it needs an API key and a verified sender to
+demonstrate anything, which works against the zero-setup goal.
+
+---
+
+## Data folder
+
+Output of a real run, committed for review:
+
+| File | Contents |
+| --- | --- |
+| `companies.json` | The 258-company seed list (generated by `scripts/build-seed.mjs`) |
+| `mentions.json` / `.csv` | Every classified mention: sentiment, relevance, confidence, model reasoning, source URL |
+| `company-status.json` / `.csv` | Per-company last-mentioned date, days since, status bucket, quarter count, sentiment breakdown |
+| `run-summary.json` | Totals, sentiment mix, status breakdown, model used |
+
+---
+
+## Assumptions and trade-offs
+
+**Assumptions**
+
+- "Last quarter" means the **trailing 90 days**, not a calendar quarter — more
+  useful for a monitoring dashboard that runs continuously.
+- Status thresholds: active ≤ 7d, recent ≤ 30d, stale ≤ 90d, dormant > 90d.
+- The seed list is names only. Where a name was ambiguous, a `searchQuery`
+  override was added by hand (53 of 258); parentheticals like
+  "Ludeo (formerly Edge)" became aliases (11) and are searched and shown.
+- An article mentioning two portfolio companies counts once for each.
+
+**Trade-offs**
+
+- **SQLite over Postgres** — zero setup beats horizontal scale for a system
+  processing a few thousand rows a day.
+- **Sequential collection** — ~7 minutes for 258 companies. Parallel would be
+  faster but Google News throttles aggressively; a slow run beats a rate-limited
+  one with gaps.
+- **Classification concurrency defaults to 2** — Ollama serves from one local
+  model, so more parallel requests mostly queue while raising timeout risk.
+  `CLASSIFY_CONCURRENCY=4` was used for the committed run.
+- **Status computed per request, not cached** — sub-millisecond at this size,
+  and it can never serve stale numbers right after a run.
+
+**Known limitations**
+
+- **Not every collected mention in `data/` is classified.** The full quarter
+  returned 4,895 mentions; at ~11.5 s each on `llama3.1:8b` that is ~15 hours.
+  The committed run labels the **last 30 days** and leaves older mentions
+  collected but unlabelled. They are stored and will be picked up by
+  `pnpm classify` with no window. This is a runtime constraint, not a
+  correctness one — the dashboard counts only classified mentions, so quarter
+  totals for older weeks understate reality.
+- **Classification quality is spot-checked, not measured.** No labelled test set
+  of real articles exists, so there is no accuracy figure to quote.
+- **Headline-only input caps accuracy.** See the RSS limitations above.
+- **No authentication.** The dashboard is read-only and assumes a trusted
+  network. The boilerplate this was derived from had Clerk auth; it was stripped
+  to keep setup to one command.
+- **No per-source credibility weighting or duplicate-story clustering.** The
+  same story from five outlets counts five times.
+
+## Possible next steps
+
+Fetch and extract article body text before classification (the biggest accuracy
+win available), cluster near-duplicate stories across outlets, add a second news
+provider behind the collector interface, and track sentiment trend per company
+over time to alert on *changes* rather than individual articles.

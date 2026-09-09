@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.turbo/
+*.log
+.env
+.env.local
+.DS_Store
+
+# Runtime database — the reviewable snapshot lives in data/ as JSON
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+classify-30d.log

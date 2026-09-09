@@ -1,0 +1,21 @@
+{
+  "name": "@ourcrowd/core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node": "./src/node.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types src/*.test.ts"
+  },
+  "devDependencies": {
+    "@ourcrowd/tsconfig": "workspace:*",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}

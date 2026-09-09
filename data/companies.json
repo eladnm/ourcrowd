@@ -1,0 +1,1125 @@
+{
+  "source": "OurCrowd portfolio + fund companies",
+  "count": 258,
+  "companies": [
+    {
+      "id": "zutacore",
+      "name": "ZutaCore"
+    },
+    {
+      "id": "maolac",
+      "name": "Maolac"
+    },
+    {
+      "id": "biolojic-design",
+      "name": "Biolojic Design"
+    },
+    {
+      "id": "oncohost",
+      "name": "OncoHost"
+    },
+    {
+      "id": "morphisec",
+      "name": "Morphisec"
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "searchQuery": "Harvey AI legal"
+    },
+    {
+      "id": "openevidence",
+      "name": "OpenEvidence"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "searchQuery": "Stripe payments"
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "searchQuery": "Cerebras Systems"
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "searchQuery": "Together AI"
+    },
+    {
+      "id": "harbinger-motors",
+      "name": "Harbinger Motors"
+    },
+    {
+      "id": "tensorwave",
+      "name": "TensorWave"
+    },
+    {
+      "id": "glean",
+      "name": "Glean",
+      "searchQuery": "Glean enterprise search"
+    },
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "searchQuery": "SpaceX"
+    },
+    {
+      "id": "deepkeep",
+      "name": "DeepKeep"
+    },
+    {
+      "id": "lambda",
+      "name": "Lambda",
+      "domain": "lambda.ai"
+    },
+    {
+      "id": "ssi",
+      "name": "SSI",
+      "aliases": [
+        "Safe Superintelligence"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "searchQuery": "xAI Musk"
+    },
+    {
+      "id": "island",
+      "name": "Island",
+      "searchQuery": "Island enterprise browser"
+    },
+    {
+      "id": "velotix",
+      "name": "Velotix"
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "searchQuery": "Databricks"
+    },
+    {
+      "id": "ayar-labs",
+      "name": "Ayar Labs"
+    },
+    {
+      "id": "repair-carbon",
+      "name": "RepAir Carbon"
+    },
+    {
+      "id": "kardome",
+      "name": "Kardome"
+    },
+    {
+      "id": "omnix-medical",
+      "name": "Omnix Medical"
+    },
+    {
+      "id": "kodiak-robotics",
+      "name": "Kodiak Robotics"
+    },
+    {
+      "id": "scale-ai",
+      "name": "Scale AI",
+      "searchQuery": "Scale AI data labeling"
+    },
+    {
+      "id": "spot-ai",
+      "name": "Spot AI"
+    },
+    {
+      "id": "siteaware",
+      "name": "Siteaware"
+    },
+    {
+      "id": "ukko",
+      "name": "Ukko",
+      "searchQuery": "Ukko food allergy protein"
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "searchQuery": "Groq AI chips"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "searchQuery": "Anthropic AI"
+    },
+    {
+      "id": "bites",
+      "name": "Bites",
+      "searchQuery": "Bites microlearning app"
+    },
+    {
+      "id": "atlas-obscura",
+      "name": "Atlas Obscura"
+    },
+    {
+      "id": "stoke-space",
+      "name": "Stoke Space"
+    },
+    {
+      "id": "seetree",
+      "name": "SeeTree"
+    },
+    {
+      "id": "oneai",
+      "name": "OneAI"
+    },
+    {
+      "id": "edity-therapeutics",
+      "name": "Edity Therapeutics"
+    },
+    {
+      "id": "carrar",
+      "name": "Carrar",
+      "searchQuery": "Carrar battery thermal"
+    },
+    {
+      "id": "quidnet-energy",
+      "name": "Quidnet Energy"
+    },
+    {
+      "id": "lano",
+      "name": "Lano",
+      "searchQuery": "Lano global payroll"
+    },
+    {
+      "id": "flash-forest",
+      "name": "Flash Forest"
+    },
+    {
+      "id": "kando",
+      "name": "Kando"
+    },
+    {
+      "id": "nt-tao",
+      "name": "NT-Tao"
+    },
+    {
+      "id": "neolithics",
+      "name": "Neolithics"
+    },
+    {
+      "id": "arrow-global",
+      "name": "Arrow Global"
+    },
+    {
+      "id": "air-ev",
+      "name": "Air EV"
+    },
+    {
+      "id": "ursa-major",
+      "name": "Ursa Major"
+    },
+    {
+      "id": "quai-md",
+      "name": "Quai.MD"
+    },
+    {
+      "id": "cyfirma",
+      "name": "Cyfirma"
+    },
+    {
+      "id": "ludeo",
+      "name": "Ludeo",
+      "aliases": [
+        "Edge"
+      ]
+    },
+    {
+      "id": "lightico",
+      "name": "Lightico"
+    },
+    {
+      "id": "3d-signals",
+      "name": "3d Signals"
+    },
+    {
+      "id": "iqm",
+      "name": "IQM"
+    },
+    {
+      "id": "kini",
+      "name": "Kini",
+      "searchQuery": "Kini startup"
+    },
+    {
+      "id": "liquid-instruments",
+      "name": "Liquid Instruments"
+    },
+    {
+      "id": "sotero",
+      "name": "Sotero",
+      "searchQuery": "Sotero data security"
+    },
+    {
+      "id": "connected-energy",
+      "name": "Connected Energy"
+    },
+    {
+      "id": "betterseeds",
+      "name": "BetterSeeds"
+    },
+    {
+      "id": "oshi",
+      "name": "Oshi",
+      "aliases": [
+        "Plantish"
+      ]
+    },
+    {
+      "id": "genopore",
+      "name": "Genopore"
+    },
+    {
+      "id": "mermade-seafoods",
+      "name": "Mermade Seafoods"
+    },
+    {
+      "id": "profuse",
+      "name": "ProFuse"
+    },
+    {
+      "id": "aeye-health",
+      "name": "AEYE Health"
+    },
+    {
+      "id": "workspot",
+      "name": "Workspot"
+    },
+    {
+      "id": "spectrum-labs",
+      "name": "Spectrum Labs"
+    },
+    {
+      "id": "anodot",
+      "name": "Anodot"
+    },
+    {
+      "id": "xage-security",
+      "name": "Xage Security"
+    },
+    {
+      "id": "ironvest",
+      "name": "IronVest"
+    },
+    {
+      "id": "the-every-company",
+      "name": "The EVERY Company"
+    },
+    {
+      "id": "insidetracker",
+      "name": "InsideTracker"
+    },
+    {
+      "id": "cardekho",
+      "name": "CarDekho"
+    },
+    {
+      "id": "one-zero-digital-bank-ltd",
+      "name": "One Zero Digital Bank Ltd."
+    },
+    {
+      "id": "binah-ai",
+      "name": "Binah.ai"
+    },
+    {
+      "id": "eko-health",
+      "name": "Eko Health"
+    },
+    {
+      "id": "cycuity",
+      "name": "Cycuity",
+      "aliases": [
+        "Tortuga Logic"
+      ]
+    },
+    {
+      "id": "peak",
+      "name": "Peak",
+      "searchQuery": "Peak AI decision intelligence"
+    },
+    {
+      "id": "oriient",
+      "name": "Oriient"
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine"
+    },
+    {
+      "id": "inziv",
+      "name": "InZiv"
+    },
+    {
+      "id": "bluetree-technologies",
+      "name": "BlueTree Technologies"
+    },
+    {
+      "id": "biolumic",
+      "name": "BioLumic"
+    },
+    {
+      "id": "orchard",
+      "name": "Orchard",
+      "searchQuery": "Orchard real estate technology"
+    },
+    {
+      "id": "tailor-brands",
+      "name": "Tailor Brands"
+    },
+    {
+      "id": "flytrex",
+      "name": "Flytrex"
+    },
+    {
+      "id": "quantum-machines",
+      "name": "Quantum Machines"
+    },
+    {
+      "id": "sufresca",
+      "name": "Sufresca"
+    },
+    {
+      "id": "guild",
+      "name": "Guild",
+      "searchQuery": "Guild Education"
+    },
+    {
+      "id": "sfara",
+      "name": "Sfara",
+      "searchQuery": "Sfara driver safety"
+    },
+    {
+      "id": "zippin",
+      "name": "Zippin",
+      "searchQuery": "Zippin checkout-free retail"
+    },
+    {
+      "id": "privateer",
+      "name": "Privateer",
+      "searchQuery": "Privateer Space"
+    },
+    {
+      "id": "cordio-medical",
+      "name": "Cordio Medical"
+    },
+    {
+      "id": "wefox",
+      "name": "wefox",
+      "searchQuery": "wefox insurance"
+    },
+    {
+      "id": "moodify",
+      "name": "Moodify",
+      "searchQuery": "Moodify scent technology"
+    },
+    {
+      "id": "polaris-quantum-biotech",
+      "name": "Polaris Quantum Biotech"
+    },
+    {
+      "id": "alloy-therapeutics",
+      "name": "Alloy Therapeutics"
+    },
+    {
+      "id": "ynsect",
+      "name": "Ynsect",
+      "searchQuery": "Ynsect insect protein"
+    },
+    {
+      "id": "treedom",
+      "name": "Treedom",
+      "searchQuery": "Treedom tree planting"
+    },
+    {
+      "id": "materialszone",
+      "name": "MaterialsZone"
+    },
+    {
+      "id": "brightinsight",
+      "name": "BrightInsight"
+    },
+    {
+      "id": "launchpad",
+      "name": "Launchpad",
+      "searchQuery": "Launchpad startup platform"
+    },
+    {
+      "id": "sequentify",
+      "name": "Sequentify"
+    },
+    {
+      "id": "tamar-robotics",
+      "name": "Tamar Robotics"
+    },
+    {
+      "id": "entangled-networks",
+      "name": "Entangled Networks"
+    },
+    {
+      "id": "dandelion-energy",
+      "name": "Dandelion Energy"
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "searchQuery": "Shield fintech compliance"
+    },
+    {
+      "id": "people-ai",
+      "name": "People.ai"
+    },
+    {
+      "id": "h2pro",
+      "name": "H2Pro"
+    },
+    {
+      "id": "jumpcloud",
+      "name": "JumpCloud"
+    },
+    {
+      "id": "future-family",
+      "name": "Future Family"
+    },
+    {
+      "id": "remilk",
+      "name": "Remilk"
+    },
+    {
+      "id": "ordergroove",
+      "name": "Ordergroove"
+    },
+    {
+      "id": "clinch",
+      "name": "Clinch",
+      "searchQuery": "Clinch personalized advertising"
+    },
+    {
+      "id": "bluegreen-water-technologies",
+      "name": "BlueGreen Water Technologies"
+    },
+    {
+      "id": "classiq",
+      "name": "Classiq"
+    },
+    {
+      "id": "diagnostic-robotics",
+      "name": "Diagnostic Robotics"
+    },
+    {
+      "id": "overtime",
+      "name": "Overtime",
+      "searchQuery": "Overtime sports media"
+    },
+    {
+      "id": "dataloop",
+      "name": "Dataloop"
+    },
+    {
+      "id": "greenlight",
+      "name": "Greenlight",
+      "searchQuery": "Greenlight family finance app"
+    },
+    {
+      "id": "cyabra",
+      "name": "Cyabra"
+    },
+    {
+      "id": "c2a-security",
+      "name": "C2A Security"
+    },
+    {
+      "id": "masterclass",
+      "name": "MasterClass"
+    },
+    {
+      "id": "heqa-security",
+      "name": "HEQA Security",
+      "aliases": [
+        "QuantLR"
+      ]
+    },
+    {
+      "id": "cytoreason",
+      "name": "CytoReason"
+    },
+    {
+      "id": "tovala",
+      "name": "Tovala"
+    },
+    {
+      "id": "ro",
+      "name": "Ro",
+      "searchQuery": "Ro telehealth company"
+    },
+    {
+      "id": "migvax",
+      "name": "MigVax"
+    },
+    {
+      "id": "skillz",
+      "name": "Skillz",
+      "searchQuery": "Skillz mobile gaming"
+    },
+    {
+      "id": "bluecircle",
+      "name": "BlueCircle",
+      "aliases": [
+        "Trellis"
+      ]
+    },
+    {
+      "id": "near",
+      "name": "Near",
+      "searchQuery": "Near data intelligence company"
+    },
+    {
+      "id": "cyberx",
+      "name": "CyberX"
+    },
+    {
+      "id": "celeno",
+      "name": "Celeno",
+      "searchQuery": "Celeno wireless chips"
+    },
+    {
+      "id": "kenna-security",
+      "name": "Kenna Security"
+    },
+    {
+      "id": "wayup",
+      "name": "Wayup",
+      "searchQuery": "WayUp early career jobs"
+    },
+    {
+      "id": "nanorep",
+      "name": "Nanorep",
+      "searchQuery": "Nanorep customer service AI"
+    },
+    {
+      "id": "taranis",
+      "name": "Taranis"
+    },
+    {
+      "id": "momentis-surgical",
+      "name": "Momentis Surgical",
+      "aliases": [
+        "Memic"
+      ]
+    },
+    {
+      "id": "argus-cyber-security",
+      "name": "Argus Cyber Security"
+    },
+    {
+      "id": "the-bouqs",
+      "name": "The Bouqs"
+    },
+    {
+      "id": "zoomcar",
+      "name": "Zoomcar"
+    },
+    {
+      "id": "sweetch",
+      "name": "Sweetch",
+      "searchQuery": "Sweetch digital health"
+    },
+    {
+      "id": "techsee",
+      "name": "TechSee"
+    },
+    {
+      "id": "replay-technologies",
+      "name": "Replay Technologies"
+    },
+    {
+      "id": "noobaa",
+      "name": "NooBaa"
+    },
+    {
+      "id": "mprest",
+      "name": "mPrest"
+    },
+    {
+      "id": "amitree",
+      "name": "Amitree"
+    },
+    {
+      "id": "wave",
+      "name": "Wave",
+      "searchQuery": "Wave financial technology"
+    },
+    {
+      "id": "firefly-neuroscience",
+      "name": "Firefly Neuroscience",
+      "aliases": [
+        "ElMindA"
+      ]
+    },
+    {
+      "id": "syqe",
+      "name": "Syqe"
+    },
+    {
+      "id": "ubimo",
+      "name": "Ubimo"
+    },
+    {
+      "id": "biscience",
+      "name": "BIScience"
+    },
+    {
+      "id": "verse-ai",
+      "name": "Verse.ai"
+    },
+    {
+      "id": "global-kinetics",
+      "name": "Global Kinetics"
+    },
+    {
+      "id": "zebra-medical-vision",
+      "name": "Zebra Medical Vision"
+    },
+    {
+      "id": "corephotonics",
+      "name": "Corephotonics"
+    },
+    {
+      "id": "jump-bikes",
+      "name": "JUMP Bikes"
+    },
+    {
+      "id": "upnride",
+      "name": "UPnRIDE"
+    },
+    {
+      "id": "appforma",
+      "name": "Appforma"
+    },
+    {
+      "id": "nextpeer",
+      "name": "Nextpeer"
+    },
+    {
+      "id": "parko",
+      "name": "Parko",
+      "searchQuery": "Parko parking app"
+    },
+    {
+      "id": "pulmone",
+      "name": "PulmOne"
+    },
+    {
+      "id": "shopial",
+      "name": "Shopial",
+      "searchQuery": "Shopial social commerce"
+    },
+    {
+      "id": "fireblade",
+      "name": "Fireblade"
+    },
+    {
+      "id": "freightos",
+      "name": "Freightos"
+    },
+    {
+      "id": "the-trendlines-group",
+      "name": "The Trendlines Group"
+    },
+    {
+      "id": "viewbix",
+      "name": "Viewbix"
+    },
+    {
+      "id": "evigilo",
+      "name": "eVigilo"
+    },
+    {
+      "id": "appdome",
+      "name": "Appdome"
+    },
+    {
+      "id": "enverid",
+      "name": "enVerid"
+    },
+    {
+      "id": "crosswise",
+      "name": "Crosswise"
+    },
+    {
+      "id": "abes-market",
+      "name": "Abes Market"
+    },
+    {
+      "id": "surgical-theater",
+      "name": "Surgical Theater"
+    },
+    {
+      "id": "mst",
+      "name": "MST"
+    },
+    {
+      "id": "bizzabo",
+      "name": "Bizzabo"
+    },
+    {
+      "id": "neverware",
+      "name": "Neverware"
+    },
+    {
+      "id": "biocatch",
+      "name": "BioCatch"
+    },
+    {
+      "id": "sight-diagnostics",
+      "name": "Sight Diagnostics"
+    },
+    {
+      "id": "consumer-physics",
+      "name": "Consumer Physics"
+    },
+    {
+      "id": "stackiq",
+      "name": "StackIQ"
+    },
+    {
+      "id": "mentad",
+      "name": "Mentad",
+      "searchQuery": "Mentad advertising"
+    },
+    {
+      "id": "cropx",
+      "name": "CropX"
+    },
+    {
+      "id": "powwow",
+      "name": "Powwow",
+      "searchQuery": "Powwow enterprise mobility"
+    },
+    {
+      "id": "apploi",
+      "name": "Apploi"
+    },
+    {
+      "id": "lifeward",
+      "name": "Lifeward",
+      "aliases": [
+        "ReWalk"
+      ]
+    },
+    {
+      "id": "cimagine",
+      "name": "Cimagine"
+    },
+    {
+      "id": "boatsetter",
+      "name": "Boatsetter"
+    },
+    {
+      "id": "stringify",
+      "name": "Stringify"
+    },
+    {
+      "id": "briefcam",
+      "name": "BriefCam"
+    },
+    {
+      "id": "billguard",
+      "name": "BillGuard"
+    },
+    {
+      "id": "xsense",
+      "name": "Xsense",
+      "aliases": [
+        "BT9"
+      ]
+    },
+    {
+      "id": "astra",
+      "name": "Astra",
+      "searchQuery": "Astra space launch company"
+    },
+    {
+      "id": "neureality",
+      "name": "NeuReality"
+    },
+    {
+      "id": "equipmentshare",
+      "name": "EquipmentShare"
+    },
+    {
+      "id": "hub-security",
+      "name": "Hub Security"
+    },
+    {
+      "id": "bluenalu",
+      "name": "BlueNalu"
+    },
+    {
+      "id": "medisafe",
+      "name": "Medisafe"
+    },
+    {
+      "id": "ravin-ai",
+      "name": "Ravin AI"
+    },
+    {
+      "id": "kemtai",
+      "name": "Kemtai",
+      "searchQuery": "Kemtai virtual exercise"
+    },
+    {
+      "id": "kryon-systems",
+      "name": "Kryon Systems"
+    },
+    {
+      "id": "tubitv",
+      "name": "TubiTV"
+    },
+    {
+      "id": "netop",
+      "name": "NetOp",
+      "searchQuery": "NetOp network automation"
+    },
+    {
+      "id": "corractions",
+      "name": "CorrActions"
+    },
+    {
+      "id": "sanotize",
+      "name": "SaNOtize"
+    },
+    {
+      "id": "stellar-cyber",
+      "name": "Stellar Cyber"
+    },
+    {
+      "id": "seetrue",
+      "name": "SeeTrue"
+    },
+    {
+      "id": "perception-point",
+      "name": "Perception Point"
+    },
+    {
+      "id": "innovalve",
+      "name": "Innovalve"
+    },
+    {
+      "id": "tala",
+      "name": "Tala",
+      "searchQuery": "Tala lending app"
+    },
+    {
+      "id": "signals-analytics",
+      "name": "Signals Analytics"
+    },
+    {
+      "id": "playsight",
+      "name": "PlaySight"
+    },
+    {
+      "id": "edunav",
+      "name": "EduNav"
+    },
+    {
+      "id": "barcode-nanotech",
+      "name": "Barcode Nanotech"
+    },
+    {
+      "id": "ride-vision",
+      "name": "Ride Vision"
+    },
+    {
+      "id": "frontier-car-group",
+      "name": "Frontier Car Group"
+    },
+    {
+      "id": "autobrains",
+      "name": "Autobrains"
+    },
+    {
+      "id": "dailypay",
+      "name": "DailyPay"
+    },
+    {
+      "id": "sayata",
+      "name": "Sayata"
+    },
+    {
+      "id": "locusview",
+      "name": "Locusview"
+    },
+    {
+      "id": "juganu",
+      "name": "Juganu"
+    },
+    {
+      "id": "nanomedic",
+      "name": "Nanomedic"
+    },
+    {
+      "id": "incredo",
+      "name": "Incredo",
+      "aliases": [
+        "DouxMatok"
+      ]
+    },
+    {
+      "id": "casper",
+      "name": "Casper",
+      "searchQuery": "Casper mattress company"
+    },
+    {
+      "id": "cb4",
+      "name": "CB4"
+    },
+    {
+      "id": "foretellix",
+      "name": "Foretellix"
+    },
+    {
+      "id": "neura",
+      "name": "Neura",
+      "searchQuery": "Neura AI"
+    },
+    {
+      "id": "itsmine",
+      "name": "ItsMine"
+    },
+    {
+      "id": "tevel",
+      "name": "Tevel"
+    },
+    {
+      "id": "trusona",
+      "name": "Trusona"
+    },
+    {
+      "id": "beyond-meat",
+      "name": "Beyond Meat"
+    },
+    {
+      "id": "honeybook",
+      "name": "HoneyBook"
+    },
+    {
+      "id": "realview-imaging",
+      "name": "RealView Imaging"
+    },
+    {
+      "id": "cybermdx",
+      "name": "CyberMDX"
+    },
+    {
+      "id": "alpha-tau",
+      "name": "Alpha Tau"
+    },
+    {
+      "id": "thetaray",
+      "name": "ThetaRay"
+    },
+    {
+      "id": "vayavision",
+      "name": "VAYAVISION"
+    },
+    {
+      "id": "insightec",
+      "name": "Insightec"
+    },
+    {
+      "id": "cognigo",
+      "name": "Cognigo"
+    },
+    {
+      "id": "ossio",
+      "name": "Ossio"
+    },
+    {
+      "id": "memed",
+      "name": "MeMed"
+    },
+    {
+      "id": "arbe-robotics",
+      "name": "Arbe Robotics"
+    },
+    {
+      "id": "lemonade",
+      "name": "Lemonade"
+    },
+    {
+      "id": "hailo",
+      "name": "Hailo"
+    },
+    {
+      "id": "sense-education",
+      "name": "Sense Education"
+    },
+    {
+      "id": "unispectral",
+      "name": "Unispectral"
+    },
+    {
+      "id": "klook",
+      "name": "Klook",
+      "searchQuery": "Klook travel booking"
+    },
+    {
+      "id": "innoviz",
+      "name": "Innoviz"
+    },
+    {
+      "id": "rewire",
+      "name": "Rewire"
+    },
+    {
+      "id": "yulife",
+      "name": "YuLife"
+    },
+    {
+      "id": "edgybees",
+      "name": "Edgybees"
+    },
+    {
+      "id": "dreamed-diabetes",
+      "name": "DreaMed Diabetes"
+    },
+    {
+      "id": "magisto",
+      "name": "Magisto"
+    },
+    {
+      "id": "virgin-hyperloop-one",
+      "name": "Virgin Hyperloop One"
+    },
+    {
+      "id": "airobotics",
+      "name": "Airobotics"
+    },
+    {
+      "id": "scopio-labs",
+      "name": "Scopio Labs"
+    },
+    {
+      "id": "beetlesat",
+      "name": "BeetleSat"
+    },
+    {
+      "id": "silo",
+      "name": "Silo",
+      "searchQuery": "Silo produce technology"
+    },
+    {
+      "id": "brainq-technologies",
+      "name": "BrainQ Technologies"
+    },
+    {
+      "id": "intuition-robotics",
+      "name": "Intuition Robotics"
+    }
+  ]
+}
