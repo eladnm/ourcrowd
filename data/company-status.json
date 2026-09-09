@@ -133,9 +133,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 7,
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 4,
       "neutral": 1
     }
@@ -247,11 +247,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 20,
+    "quarterMentionCount": 21,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 20
+      "neutral": 21
     }
   },
   {
@@ -343,13 +343,13 @@
     "companyName": "Beyond Meat",
     "ticker": "BYND",
     "lastMentionedAt": "2026-09-06T08:02:39.000Z",
-    "daysSinceLastMention": 2,
+    "daysSinceLastMention": 3,
     "status": "active",
-    "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 4,
+    "label": "last mentioned 3 days ago",
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
       "positive": 1,
-      "negative": 2,
+      "negative": 3,
       "neutral": 1
     }
   },
@@ -541,15 +541,15 @@
   {
     "companyId": "briefcam",
     "companyName": "BriefCam",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-28T07:00:00.000Z",
+    "daysSinceLastMention": 12,
+    "status": "recent",
+    "label": "last mentioned 12 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -601,11 +601,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 29,
+    "quarterMentionCount": 30,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 29
+      "neutral": 30
     }
   },
   {
@@ -727,11 +727,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 7,
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 0,
-      "neutral": 3
+      "neutral": 4
     }
   },
   {
@@ -826,11 +826,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 17,
+    "quarterMentionCount": 23,
     "sentimentBreakdown": {
-      "positive": 10,
+      "positive": 15,
       "negative": 1,
-      "neutral": 6
+      "neutral": 7
     }
   },
   {
@@ -1081,11 +1081,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 13,
+    "quarterMentionCount": 15,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 9,
-      "neutral": 4
+      "negative": 10,
+      "neutral": 5
     }
   },
   {
@@ -1095,11 +1095,11 @@
     "daysSinceLastMention": 5,
     "status": "active",
     "label": "last mentioned 5 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 1
+      "neutral": 3
     }
   },
   {
@@ -1226,11 +1226,11 @@
     "daysSinceLastMention": 6,
     "status": "active",
     "label": "last mentioned 6 days ago",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
       "positive": 3,
       "negative": 0,
-      "neutral": 1
+      "neutral": 2
     }
   },
   {
@@ -1327,9 +1327,9 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 1
     }
@@ -1709,9 +1709,9 @@
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 15,
+    "quarterMentionCount": 16,
     "sentimentBreakdown": {
-      "positive": 14,
+      "positive": 15,
       "negative": 1,
       "neutral": 0
     }
@@ -2297,9 +2297,9 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 2
     }
@@ -2493,11 +2493,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 5,
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
-      "positive": 3,
+      "positive": 4,
       "negative": 0,
-      "neutral": 2
+      "neutral": 3
     }
   },
   {
@@ -2546,9 +2546,9 @@
     "companyId": "remilk",
     "companyName": "Remilk",
     "lastMentionedAt": "2026-09-01T08:00:00.000Z",
-    "daysSinceLastMention": 7,
-    "status": "active",
-    "label": "last mentioned 7 days ago",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
     "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 1,
@@ -2861,9 +2861,9 @@
     "daysSinceLastMention": 6,
     "status": "active",
     "label": "last mentioned 6 days ago",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 3,
       "neutral": 1
     }
@@ -2917,11 +2917,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 11,
+    "quarterMentionCount": 12,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 1,
-      "neutral": 6
+      "neutral": 7
     }
   },
   {
@@ -2987,10 +2987,10 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 9,
+    "quarterMentionCount": 10,
     "sentimentBreakdown": {
       "positive": 4,
-      "negative": 5,
+      "negative": 6,
       "neutral": 0
     }
   },
@@ -3352,9 +3352,9 @@
     "daysSinceLastMention": 8,
     "status": "recent",
     "label": "last mentioned 8 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 0
     }
@@ -3651,10 +3651,10 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 8,
+    "quarterMentionCount": 10,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 8,
+      "negative": 10,
       "neutral": 0
     }
   }
