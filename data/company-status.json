@@ -86,15 +86,16 @@
   {
     "companyId": "alpha-tau",
     "companyName": "Alpha Tau",
+    "ticker": "DRTS",
     "lastMentionedAt": "2026-09-08T11:32:25.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 9,
+    "quarterMentionCount": 13,
     "sentimentBreakdown": {
-      "positive": 6,
+      "positive": 9,
       "negative": 0,
-      "neutral": 3
+      "neutral": 4
     }
   },
   {
@@ -132,9 +133,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 2,
       "negative": 3,
       "neutral": 1
     }
@@ -184,6 +185,7 @@
   {
     "companyId": "arbe-robotics",
     "companyName": "Arbe Robotics",
+    "ticker": "ARBE",
     "lastMentionedAt": "2026-09-08T17:42:00.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
@@ -226,6 +228,7 @@
   {
     "companyId": "astra",
     "companyName": "Astra",
+    "ticker": "ASTR",
     "lastMentionedAt": "2026-09-08T03:52:46.000Z",
     "daysSinceLastMention": 1,
     "status": "active",
@@ -244,11 +247,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 16,
+    "quarterMentionCount": 17,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 16
+      "neutral": 17
     }
   },
   {
@@ -338,6 +341,7 @@
   {
     "companyId": "beyond-meat",
     "companyName": "Beyond Meat",
+    "ticker": "BYND",
     "lastMentionedAt": "2026-09-06T08:02:39.000Z",
     "daysSinceLastMention": 2,
     "status": "active",
@@ -380,13 +384,13 @@
   {
     "companyId": "biocatch",
     "companyName": "BioCatch",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-31T08:30:00.000Z",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -440,16 +444,19 @@
     "daysSinceLastMention": 6,
     "status": "active",
     "label": "last mentioned 6 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 1,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
     "companyId": "bluecircle",
     "companyName": "BlueCircle",
+    "aliases": [
+      "Trellis"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -594,11 +601,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 23,
+    "quarterMentionCount": 26,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 23
+      "neutral": 26
     }
   },
   {
@@ -650,10 +657,10 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 1,
-      "negative": 0,
+      "negative": 1,
       "neutral": 0
     }
   },
@@ -720,9 +727,9 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 6,
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
-      "positive": 3,
+      "positive": 4,
       "negative": 0,
       "neutral": 3
     }
@@ -786,13 +793,13 @@
   {
     "companyId": "cropx",
     "companyName": "CropX",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-31T16:57:33.000Z",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -814,15 +821,16 @@
   {
     "companyId": "cyabra",
     "companyName": "Cyabra",
+    "ticker": "CYAB",
     "lastMentionedAt": "2026-09-08T16:16:16.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 12,
+    "quarterMentionCount": 17,
     "sentimentBreakdown": {
-      "positive": 7,
-      "negative": 0,
-      "neutral": 5
+      "positive": 10,
+      "negative": 1,
+      "neutral": 6
     }
   },
   {
@@ -856,6 +864,9 @@
   {
     "companyId": "cycuity",
     "companyName": "Cycuity",
+    "aliases": [
+      "Tortuga Logic"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -902,9 +913,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -930,9 +941,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 3,
+      "positive": 5,
       "negative": 0,
       "neutral": 0
     }
@@ -1070,10 +1081,10 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 11,
+    "quarterMentionCount": 13,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 7,
+      "negative": 9,
       "neutral": 4
     }
   },
@@ -1094,6 +1105,10 @@
   {
     "companyId": "firefly-neuroscience",
     "companyName": "Firefly Neuroscience",
+    "aliases": [
+      "ElMindA"
+    ],
+    "ticker": "AIFF",
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -1108,13 +1123,13 @@
   {
     "companyId": "flash-forest",
     "companyName": "Flash Forest",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-31T14:33:27.000Z",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -1150,6 +1165,7 @@
   {
     "companyId": "freightos",
     "companyName": "Freightos",
+    "ticker": "CRGO",
     "lastMentionedAt": "2026-09-08T11:40:56.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
@@ -1290,6 +1306,9 @@
   {
     "companyId": "heqa-security",
     "companyName": "HEQA Security",
+    "aliases": [
+      "QuantLR"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -1336,9 +1355,9 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 1
     }
@@ -1346,13 +1365,13 @@
   {
     "companyId": "honeybook",
     "companyName": "HoneyBook",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-31T07:00:00.000Z",
+    "daysSinceLastMention": 9,
+    "status": "recent",
+    "label": "last mentioned 9 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -1364,10 +1383,10 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
+      "negative": 1,
       "neutral": 1
     }
   },
@@ -1402,6 +1421,9 @@
   {
     "companyId": "incredo",
     "companyName": "Incredo",
+    "aliases": [
+      "DouxMatok"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -1430,15 +1452,16 @@
   {
     "companyId": "innoviz",
     "companyName": "Innoviz",
+    "ticker": "INVZ",
     "lastMentionedAt": "2026-09-02T05:03:06.000Z",
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 3,
       "negative": 1,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1500,13 +1523,13 @@
   {
     "companyId": "island",
     "companyName": "Island",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-05T00:13:34.000Z",
+    "daysSinceLastMention": 4,
+    "status": "active",
+    "label": "last mentioned 4 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -1644,9 +1667,9 @@
     "daysSinceLastMention": 2,
     "status": "active",
     "label": "last mentioned 2 days ago",
-    "quarterMentionCount": 7,
+    "quarterMentionCount": 8,
     "sentimentBreakdown": {
-      "positive": 3,
+      "positive": 4,
       "negative": 0,
       "neutral": 4
     }
@@ -1682,14 +1705,14 @@
   {
     "companyId": "lambda",
     "companyName": "Lambda",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T19:59:20.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 13,
     "sentimentBreakdown": {
-      "positive": 0,
-      "negative": 0,
+      "positive": 12,
+      "negative": 1,
       "neutral": 0
     }
   },
@@ -1724,6 +1747,7 @@
   {
     "companyId": "lemonade",
     "companyName": "Lemonade",
+    "ticker": "LMND",
     "lastMentionedAt": "2026-09-03T00:32:00.000Z",
     "daysSinceLastMention": 6,
     "status": "active",
@@ -1738,15 +1762,19 @@
   {
     "companyId": "lifeward",
     "companyName": "Lifeward",
+    "aliases": [
+      "ReWalk"
+    ],
+    "ticker": "LFWD",
     "lastMentionedAt": "2026-09-08T13:08:21.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 5,
+    "quarterMentionCount": 13,
     "sentimentBreakdown": {
       "positive": 4,
-      "negative": 0,
-      "neutral": 1
+      "negative": 3,
+      "neutral": 6
     }
   },
   {
@@ -1794,6 +1822,9 @@
   {
     "companyId": "ludeo",
     "companyName": "Ludeo",
+    "aliases": [
+      "Edge"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -1812,9 +1843,9 @@
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -1892,13 +1923,13 @@
   {
     "companyId": "medisafe",
     "companyName": "Medisafe",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T07:08:03.000Z",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -1948,6 +1979,9 @@
   {
     "companyId": "momentis-surgical",
     "companyName": "Momentis Surgical",
+    "aliases": [
+      "Memic"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -1980,9 +2014,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 2
     }
@@ -2089,9 +2123,9 @@
     "companyId": "neura",
     "companyName": "Neura",
     "lastMentionedAt": "2026-09-08T07:40:12.000Z",
-    "daysSinceLastMention": 0,
+    "daysSinceLastMention": 1,
     "status": "active",
-    "label": "last mentioned today",
+    "label": "last mentioned yesterday",
     "quarterMentionCount": 6,
     "sentimentBreakdown": {
       "positive": 5,
@@ -2204,9 +2238,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 9,
+    "quarterMentionCount": 10,
     "sentimentBreakdown": {
-      "positive": 9,
+      "positive": 10,
       "negative": 0,
       "neutral": 0
     }
@@ -2256,13 +2290,16 @@
   {
     "companyId": "oshi",
     "companyName": "Oshi",
+    "aliases": [
+      "Plantish"
+    ],
     "lastMentionedAt": "2026-09-08T01:31:10.000Z",
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 2,
       "negative": 0,
       "neutral": 2
     }
@@ -2288,11 +2325,11 @@
     "daysSinceLastMention": 3,
     "status": "active",
     "label": "last mentioned 3 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 1
+      "neutral": 2
     }
   },
   {
@@ -2456,9 +2493,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 2
     }
@@ -2508,13 +2545,13 @@
   {
     "companyId": "remilk",
     "companyName": "Remilk",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T08:00:00.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -2554,9 +2591,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 5,
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 4,
+      "positive": 5,
       "negative": 0,
       "neutral": 1
     }
@@ -2592,6 +2629,9 @@
   {
     "companyId": "ssi",
     "companyName": "SSI",
+    "aliases": [
+      "Safe Superintelligence"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -2638,11 +2678,11 @@
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2816,6 +2856,7 @@
   {
     "companyId": "skillz",
     "companyName": "Skillz",
+    "ticker": "SKLZ",
     "lastMentionedAt": "2026-09-02T18:09:32.000Z",
     "daysSinceLastMention": 6,
     "status": "active",
@@ -2848,9 +2889,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 8,
+    "quarterMentionCount": 9,
     "sentimentBreakdown": {
-      "positive": 5,
+      "positive": 6,
       "negative": 2,
       "neutral": 1
     }
@@ -2876,11 +2917,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 7,
+    "quarterMentionCount": 10,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 1,
-      "neutral": 2
+      "neutral": 5
     }
   },
   {
@@ -2918,9 +2959,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 47,
+    "quarterMentionCount": 48,
     "sentimentBreakdown": {
-      "positive": 42,
+      "positive": 43,
       "negative": 3,
       "neutral": 2
     }
@@ -2946,9 +2987,9 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 6,
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 4,
       "neutral": 0
     }
@@ -3152,6 +3193,7 @@
   {
     "companyId": "the-trendlines-group",
     "companyName": "The Trendlines Group",
+    "ticker": "TRNLY",
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -3184,9 +3226,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 15,
+    "quarterMentionCount": 17,
     "sentimentBreakdown": {
-      "positive": 12,
+      "positive": 14,
       "negative": 1,
       "neutral": 2
     }
@@ -3306,13 +3348,13 @@
   {
     "companyId": "ursa-major",
     "companyName": "Ursa Major",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T07:00:00.000Z",
+    "daysSinceLastMention": 8,
+    "status": "recent",
+    "label": "last mentioned 8 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -3362,6 +3404,7 @@
   {
     "companyId": "viewbix",
     "companyName": "Viewbix",
+    "ticker": "VBIX",
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -3376,15 +3419,15 @@
   {
     "companyId": "virgin-hyperloop-one",
     "companyName": "Virgin Hyperloop One",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-01T11:17:24.000Z",
+    "daysSinceLastMention": 7,
+    "status": "active",
+    "label": "last mentioned 7 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -3446,6 +3489,9 @@
   {
     "companyId": "xsense",
     "companyName": "Xsense",
+    "aliases": [
+      "BT9"
+    ],
     "lastMentionedAt": null,
     "daysSinceLastMention": null,
     "status": "none",
@@ -3516,13 +3562,14 @@
   {
     "companyId": "zoomcar",
     "companyName": "Zoomcar",
+    "ticker": "ZCAR",
     "lastMentionedAt": "2026-09-08T10:03:01.000Z",
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 4,
       "negative": 0,
       "neutral": 0
     }

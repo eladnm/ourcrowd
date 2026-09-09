@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-09-09T07:16:21.307Z",
-  "quarterStart": "2026-06-11T07:16:21.307Z",
+  "generatedAt": "2026-09-09T07:45:06.125Z",
+  "quarterStart": "2026-06-11T07:45:06.125Z",
   "model": "llama3.1:8b",
   "totals": {
     "companies": 258,
-    "companiesWithCoverage": 69,
+    "companiesWithCoverage": 79,
     "mentionsCollected": 4895,
-    "mentionsClassified": 560,
-    "mentionsRelevant": 334,
-    "mentionsIrrelevant": 226
+    "mentionsClassified": 688,
+    "mentionsRelevant": 415,
+    "mentionsIrrelevant": 273
   },
   "sentiment": {
-    "positive": 173,
-    "negative": 51,
-    "neutral": 110
+    "positive": 226,
+    "negative": 60,
+    "neutral": 129
   },
   "statusBreakdown": {
-    "active": 69,
-    "recent": 0,
+    "active": 73,
+    "recent": 6,
     "stale": 0,
     "dormant": 0,
-    "none": 189
+    "none": 179
   }
 }
