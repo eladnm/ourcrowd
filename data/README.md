@@ -32,6 +32,12 @@ recent window rather than the entire quarter. `run-summary.json` records both
 figures — `mentionsCollected` vs `mentionsClassified`. See "Known limitations"
 in the root README.
 
+**Most companies show as "active".** Classification runs newest-first, so the
+labelled mentions in this snapshot are overwhelmingly from the last week —
+which makes almost every company with coverage fall in the `active` (≤7 days)
+bucket. That is an artefact of how far classification got, not of the status
+logic, which is unit-tested across all five buckets.
+
 **`relevance: "irrelevant"` rows are intentional.** Around 50 of the tracked
 companies have names that collide with common words, TV shows or other
 businesses (Shield, Silo, Peak, Wave, Orchard…). The model filters those out,

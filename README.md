@@ -401,9 +401,19 @@ Output of a real run, committed for review:
   lost: unlabelled mentions sit in the database and `pnpm classify` (with no
   `--since`) picks up where it stopped.
 
-  This is a throughput limit, not a correctness one — but it does mean **quarter
-  totals for the older weeks understate reality**, because the dashboard counts
-  only classified mentions. On a machine with a GPU, or with a smaller model
+  This is a throughput limit, not a correctness one — but it has two visible
+  effects on the committed snapshot, both of which resolve as classification
+  works backwards through the quarter:
+
+  - **Quarter totals for older weeks understate reality**, because the
+    dashboard counts only classified mentions. The weekly trend chart is dense
+    at the recent end and sparse further back.
+  - **Almost every company with coverage shows as "active"**, because
+    classification runs newest-first, so the labelled mentions are the recent
+    ones. The `recent` / `stale` / `dormant` buckets fill in as older coverage
+    gets labelled — the bucketing logic itself is exercised by unit tests.
+
+  On a machine with a GPU, or with a smaller model
   (`OLLAMA_MODEL=qwen2.5:3b`), the full quarter is comfortably achievable.
 - **Classification quality is spot-checked, not measured.** The fixture set is
   ten hand-written cases, and the prompt was tuned against them — so the 10/10
