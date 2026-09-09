@@ -4,6 +4,7 @@ import type { RawMention } from '@ourcrowd/core';
 import {
   useInMemoryDb,
   upsertCompanies,
+  getCompanies,
   insertMentions,
   getUnclassifiedMentions,
   saveClassification,
@@ -120,4 +121,10 @@ test('classification can be scoped to specific companies', () => {
 test('an empty company scope matches nothing rather than everything', () => {
   insertMentions([mention('a')]);
   assert.deepEqual(getUnclassifiedMentions({ companyIds: [] }), []);
+});
+
+test('a ticker survives a round trip through storage', () => {
+  upsertCompanies([{ id: 'alpha-tau', name: 'Alpha Tau', ticker: 'DRTS' }]);
+  const stored = getCompanies().find((c) => c.id === 'alpha-tau');
+  assert.equal(stored?.ticker, 'DRTS');
 });

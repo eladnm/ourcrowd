@@ -326,7 +326,8 @@
     },
     {
       "id": "cardekho",
-      "name": "CarDekho"
+      "name": "CarDekho",
+      "ticker": "CARDEKHO"
     },
     {
       "id": "one-zero-digital-bank-ltd",
@@ -552,7 +553,8 @@
     },
     {
       "id": "cyabra",
-      "name": "Cyabra"
+      "name": "Cyabra",
+      "ticker": "CYBR"
     },
     {
       "id": "c2a-security",
@@ -592,6 +594,7 @@
       "id": "skillz",
       "name": "Skillz",
       "sector": "mobile games platform",
+      "ticker": "SKLZ",
       "searchQuery": "Skillz mobile gaming"
     },
     {
@@ -642,7 +645,8 @@
       "name": "Momentis Surgical",
       "aliases": [
         "Memic"
-      ]
+      ],
+      "ticker": "MMSI"
     },
     {
       "id": "argus-cyber-security",
@@ -654,7 +658,8 @@
     },
     {
       "id": "zoomcar",
-      "name": "Zoomcar"
+      "name": "Zoomcar",
+      "ticker": "ZCAR"
     },
     {
       "id": "sweetch",
@@ -693,7 +698,8 @@
       "name": "Firefly Neuroscience",
       "aliases": [
         "ElMindA"
-      ]
+      ],
+      "ticker": "AIFF"
     },
     {
       "id": "syqe",
@@ -761,15 +767,18 @@
     },
     {
       "id": "freightos",
-      "name": "Freightos"
+      "name": "Freightos",
+      "ticker": "CRGO"
     },
     {
       "id": "the-trendlines-group",
-      "name": "The Trendlines Group"
+      "name": "The Trendlines Group",
+      "ticker": "TRNLY"
     },
     {
       "id": "viewbix",
-      "name": "Viewbix"
+      "name": "Viewbix",
+      "ticker": "VBIX"
     },
     {
       "id": "evigilo",
@@ -850,7 +859,8 @@
       "name": "Lifeward",
       "aliases": [
         "ReWalk"
-      ]
+      ],
+      "ticker": "LFWD"
     },
     {
       "id": "cimagine",
@@ -883,6 +893,7 @@
       "id": "astra",
       "name": "Astra",
       "sector": "space launch vehicles",
+      "ticker": "ASTR",
       "searchQuery": "Astra space launch company"
     },
     {
@@ -1048,7 +1059,8 @@
     },
     {
       "id": "beyond-meat",
-      "name": "Beyond Meat"
+      "name": "Beyond Meat",
+      "ticker": "BYND"
     },
     {
       "id": "honeybook",
@@ -1064,7 +1076,8 @@
     },
     {
       "id": "alpha-tau",
-      "name": "Alpha Tau"
+      "name": "Alpha Tau",
+      "ticker": "DRTS"
     },
     {
       "id": "thetaray",
@@ -1076,7 +1089,8 @@
     },
     {
       "id": "insightec",
-      "name": "Insightec"
+      "name": "Insightec",
+      "ticker": "INSI"
     },
     {
       "id": "cognigo",
@@ -1092,15 +1106,18 @@
     },
     {
       "id": "arbe-robotics",
-      "name": "Arbe Robotics"
+      "name": "Arbe Robotics",
+      "ticker": "ARBE"
     },
     {
       "id": "lemonade",
-      "name": "Lemonade"
+      "name": "Lemonade",
+      "ticker": "LMND"
     },
     {
       "id": "hailo",
-      "name": "Hailo"
+      "name": "Hailo",
+      "ticker": "HLO"
     },
     {
       "id": "sense-education",
@@ -1114,11 +1131,13 @@
       "id": "klook",
       "name": "Klook",
       "sector": "travel experience booking",
+      "ticker": "KLOOK",
       "searchQuery": "Klook travel booking"
     },
     {
       "id": "innoviz",
-      "name": "Innoviz"
+      "name": "Innoviz",
+      "ticker": "INVZ"
     },
     {
       "id": "rewire",

@@ -46,6 +46,7 @@ function migrate(database: DatabaseSync): void {
       aliases TEXT,
       domain TEXT,
       sector TEXT,
+      ticker TEXT,
       search_query TEXT
     );
 
@@ -116,12 +117,12 @@ export function loadCompanies(): Company[] {
 export function upsertCompanies(companies: Company[]): Company[] {
   const database = getDb();
   const upsert = database.prepare(`
-    INSERT INTO companies (id, name, aliases, domain, sector, search_query)
-    VALUES (:id, :name, :aliases, :domain, :sector, :search_query)
+    INSERT INTO companies (id, name, aliases, domain, sector, ticker, search_query)
+    VALUES (:id, :name, :aliases, :domain, :sector, :ticker, :search_query)
     ON CONFLICT(id) DO UPDATE SET
       name = excluded.name, aliases = excluded.aliases,
       domain = excluded.domain, sector = excluded.sector,
-      search_query = excluded.search_query
+      ticker = excluded.ticker, search_query = excluded.search_query
   `);
   transaction(database, () => {
     for (const c of companies) {
@@ -131,6 +132,7 @@ export function upsertCompanies(companies: Company[]): Company[] {
         aliases: c.aliases ? JSON.stringify(c.aliases) : null,
         domain: c.domain ?? null,
         sector: c.sector ?? null,
+        ticker: c.ticker ?? null,
         search_query: c.searchQuery ?? null,
       });
     }
@@ -144,6 +146,7 @@ interface CompanyRow {
   aliases: string | null;
   domain: string | null;
   sector: string | null;
+  ticker: string | null;
   search_query: string | null;
 }
 
@@ -154,6 +157,7 @@ function toCompany(row: CompanyRow): Company {
     ...(row.aliases ? { aliases: JSON.parse(row.aliases) as string[] } : {}),
     ...(row.domain ? { domain: row.domain } : {}),
     ...(row.sector ? { sector: row.sector } : {}),
+    ...(row.ticker ? { ticker: row.ticker } : {}),
     ...(row.search_query ? { searchQuery: row.search_query } : {}),
   };
 }

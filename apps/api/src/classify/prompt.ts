@@ -35,6 +35,8 @@ You will be given a company and a news headline with a short snippet. Do two thi
    Where a sector is given, the article must plausibly fit that sector to be
    relevant: an article about a television series is not about a food-technology
    company that happens to share its name.
+   Where a stock ticker is given, coverage referring to the company only by that
+   ticker IS about the company — treat it as relevant.
    When the snippet is too thin to tell, prefer "relevant" only if the
    surrounding context (sector, technology, funding) fits the company
    described.
@@ -60,6 +62,7 @@ export function buildUserPrompt(company: Company, mention: RawMention): string {
   const lines = [`Company: ${company.name}`];
 
   if (company.sector) lines.push(`Sector: ${company.sector}`);
+  if (company.ticker) lines.push(`Stock ticker: ${company.ticker}`);
   if (company.aliases?.length) {
     lines.push(`Also known as: ${company.aliases.join(', ')}`);
   }

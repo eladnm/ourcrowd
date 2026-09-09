@@ -58,3 +58,14 @@ test('optional fields are omitted rather than sent empty', () => {
   assert.doesNotMatch(prompt, /Snippet:/);
   assert.doesNotMatch(prompt, /Publication:/);
 });
+
+test('a stock ticker is passed so symbol-only coverage is recognised', () => {
+  // Regression: an audit found "Why Did DRTS Stock Surge?" filtered out as
+  // unrelated to Alpha Tau, when DRTS is exactly its NASDAQ ticker.
+  const company: Company = { id: 'alpha-tau', name: 'Alpha Tau', ticker: 'DRTS' };
+  assert.match(buildUserPrompt(company, mention()), /Stock ticker: DRTS/);
+});
+
+test('the prompt tells the model that ticker-only coverage is relevant', () => {
+  assert.match(SYSTEM_PROMPT, /stock ticker is given/i);
+});

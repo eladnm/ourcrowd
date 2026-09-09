@@ -74,6 +74,34 @@ const SECTORS = {
   Shield: 'fintech compliance software',
 };
 
+/**
+ * Stock tickers for the listed companies. Passed to the classifier so coverage
+ * that names only the symbol is recognised: an audit of the first run found
+ * "Why Did DRTS Stock Surge 22% Today?" being filtered out as unrelated to
+ * Alpha Tau, when DRTS is exactly Alpha Tau Medical's NASDAQ ticker.
+ */
+const TICKERS = {
+  'Alpha Tau': 'DRTS',
+  Lemonade: 'LMND',
+  'Beyond Meat': 'BYND',
+  Skillz: 'SKLZ',
+  'Arbe Robotics': 'ARBE',
+  Innoviz: 'INVZ',
+  Hailo: 'HLO',
+  Lifeward: 'LFWD',
+  'Firefly Neuroscience': 'AIFF',
+  Freightos: 'CRGO',
+  Cyabra: 'CYBR',
+  'Momentis Surgical': 'MMSI',
+  Zoomcar: 'ZCAR',
+  CarDekho: 'CARDEKHO',
+  Viewbix: 'VBIX',
+  'The Trendlines Group': 'TRNLY',
+  Insightec: 'INSI',
+  Klook: 'KLOOK',
+  Astra: 'ASTR',
+};
+
 /** Companies whose plain name is too ambiguous to search for on its own. */
 const DISAMBIGUATION = {
   Shield: 'Shield fintech compliance',
@@ -182,6 +210,7 @@ for (const line of lines) {
     // searchQuery overrides the default `"<name>"` query when the bare name
     // is a common English word and would drown the feed in noise.
     ...(SECTORS[name] ? { sector: SECTORS[name] } : {}),
+    ...(TICKERS[name] ? { ticker: TICKERS[name] } : {}),
     ...(DISAMBIGUATION[name] ? { searchQuery: DISAMBIGUATION[name] } : {}),
   });
 }
@@ -193,4 +222,5 @@ writeFileSync(
 console.log(`wrote data/companies.json with ${companies.length} companies`);
 console.log(`  ${companies.filter((c) => c.aliases).length} with aliases`);
 console.log(`  ${companies.filter((c) => c.sector).length} with a sector for disambiguation`);
+console.log(`  ${companies.filter((c) => c.ticker).length} with a stock ticker`);
 console.log(`  ${companies.filter((c) => c.searchQuery).length} with disambiguated search queries`);

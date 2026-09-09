@@ -13,6 +13,12 @@ export interface Company {
   domain?: string;
   sector?: string;
   /**
+   * Stock ticker for listed companies. Passed to the classifier so coverage
+   * that refers to a company only by its symbol ("Why did DRTS surge?") is
+   * recognised rather than filtered out as a name mismatch.
+   */
+  ticker?: string;
+  /**
    * Overrides the default `"<name>"` news query. Set for companies whose name
    * is a common English word (Shield, Peak, Wave, Silo...) where the bare name
    * returns mostly unrelated coverage.

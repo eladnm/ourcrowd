@@ -395,6 +395,22 @@ Output of a real run, committed for review:
   ten hand-written cases, and the prompt was tuned against them — so the 10/10
   is a regression check, not an accuracy figure. No labelled set of real
   articles exists here.
+- **Ticker-only coverage was being filtered out — now fixed.** An audit of the
+  run found the filter rejecting *"Why Did DRTS Stock Surge 22% Today?"* for
+  Alpha Tau, when DRTS is exactly Alpha Tau Medical's NASDAQ ticker. That was
+  1 clear false negative in 153 filtered items (~0.7%); the other name-mismatch
+  rejections sampled were correct. Companies now carry a `ticker` (19 of the
+  258 listed ones), the prompt states that ticker-only coverage counts, and
+  both are covered by regression tests. **Mentions classified before this fix
+  are still labelled under the old prompt** — re-run `pnpm classify` after
+  clearing labels if you want them reconsidered.
+- **Roughly 40% of collected mentions are filtered as irrelevant.** That is
+  high but expected given ~50 common-word company names; the filtered rows are
+  kept and shown dimmed so the decision can be audited.
+- **Model confidence is not a useful review signal.** Across the committed run
+  `llama3.1:8b` reported ≥0.7 on every single label, so confidence cannot be
+  used to route uncertain items to a human. It is stored anyway, but do not
+  build a review queue on it.
 - **Headline-only input caps accuracy.** See the RSS limitations above.
 - **No authentication.** The dashboard is read-only and assumes a trusted
   network. The boilerplate this was derived from had Clerk auth; it was stripped
