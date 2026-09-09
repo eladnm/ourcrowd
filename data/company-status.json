@@ -230,10 +230,10 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 16,
+    "quarterMentionCount": 18,
     "sentimentBreakdown": {
       "positive": 8,
-      "negative": 7,
+      "negative": 9,
       "neutral": 1
     }
   },
@@ -1252,9 +1252,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -1336,11 +1336,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1640,15 +1640,15 @@
   {
     "companyId": "klook",
     "companyName": "Klook",
-    "lastMentionedAt": "2026-09-04T20:45:12.000Z",
-    "daysSinceLastMention": 4,
+    "lastMentionedAt": "2026-09-07T02:20:00.000Z",
+    "daysSinceLastMention": 2,
     "status": "active",
-    "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 3,
+    "label": "last mentioned 2 days ago",
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
-      "neutral": 1
+      "neutral": 4
     }
   },
   {
@@ -2092,11 +2092,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 3,
+    "quarterMentionCount": 6,
     "sentimentBreakdown": {
-      "positive": 3,
+      "positive": 5,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2284,13 +2284,13 @@
   {
     "companyId": "overtime",
     "companyName": "Overtime",
-    "lastMentionedAt": "2026-09-04T18:05:00.000Z",
-    "daysSinceLastMention": 4,
+    "lastMentionedAt": "2026-09-05T14:11:49.000Z",
+    "daysSinceLastMention": 3,
     "status": "active",
-    "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 1,
+    "label": "last mentioned 3 days ago",
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 1
     }
@@ -3390,15 +3390,15 @@
   {
     "companyId": "wave",
     "companyName": "Wave",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-09-06T23:19:20.000Z",
+    "daysSinceLastMention": 2,
+    "status": "active",
+    "label": "last mentioned 2 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
