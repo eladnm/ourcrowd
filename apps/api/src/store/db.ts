@@ -184,7 +184,10 @@ export function prepareStore(): { companies: number; hydrated: number } {
 }
 
 function hydrateFromExportIfEmpty(): number {
-  if (getStats().mentions > 0) return 0;
+  // Keyed on *classified* mentions, not any mentions: someone who ran
+  // `pnpm collect` before `pnpm api` has raw rows but nothing to display, and
+  // should still get the snapshot's labels.
+  if (getStats().classified > 0) return 0;
 
   const mentionsPath = join(config.exportDir, 'mentions.json');
   if (!existsSync(mentionsPath)) return 0;
@@ -210,16 +213,35 @@ function hydrateFromExportIfEmpty(): number {
       collectedAt: m.collectedAt,
     })),
   );
-  for (const mention of mentions) {
-    saveClassification(mention.id, {
-      sentiment: mention.sentiment,
-      relevance: mention.relevance,
-      confidence: mention.confidence,
-      reasoning: mention.reasoning,
-      model: mention.model,
-      classifiedAt: mention.classifiedAt,
-    });
-  }
+
+  const database = getDb();
+  const stmt = database.prepare(
+    `UPDATE mentions SET sentiment = ?, relevance = ?, confidence = ?,
+       reasoning = ?, model = ?, classified_at = ?, alerted_at = ?
+     WHERE id = ?`,
+  );
+
+  // One transaction, not 700 auto-committed writes with a WAL fsync each —
+  // this runs on the server's startup path, before Fastify binds its port.
+  transaction(database, () => {
+    for (const mention of mentions) {
+      // Stamp alerted_at. These are historical mentions being restored from a
+      // snapshot, not coverage we just discovered; leaving it NULL would make
+      // the first `pnpm alert` after a fresh clone replay the entire backfill
+      // as though it were breaking news.
+      stmt.run(
+        mention.sentiment,
+        mention.relevance,
+        mention.confidence,
+        mention.reasoning,
+        mention.model,
+        mention.classifiedAt,
+        mention.classifiedAt || new Date().toISOString(),
+        mention.id,
+      );
+    }
+  });
+
   return mentions.length;
 }
 
@@ -325,14 +347,22 @@ function toRawMention(row: MentionRow): RawMention {
 /**
  * Mentions still awaiting a label, newest first.
  *
- * `sinceDays` bounds the work to recent coverage — classifying an entire
- * quarterly backfill on a local model takes hours, so the daily job and a
- * time-boxed first run both narrow the window here rather than in the caller.
+ * Two different ways to bound the work, and the difference matters:
+ *
+ * - `sinceDays` filters on **publication** date. Use it to answer "label the
+ *   last N days of coverage" — a time-boxed backfill.
+ * - `collectedSinceDays` filters on when **we first saw** the item. Use it for
+ *   the daily job. Google News `when:Nd` is an indexing window, not a pubDate
+ *   filter, so a 2-day collection routinely returns older articles; bounding
+ *   the daily classify by publication date would skip them on every future run
+ *   too (the cutoff only moves forward), stranding them unlabelled forever and
+ *   silently dropping them from alerts.
  */
 export function getUnclassifiedMentions(
   options: {
     limit?: number;
     sinceDays?: number;
+    collectedSinceDays?: number;
     companyIds?: string[];
     mentionIds?: string[];
   } = {},
@@ -343,6 +373,13 @@ export function getUnclassifiedMentions(
   if (options.sinceDays !== undefined) {
     clauses.push('published_at >= ?');
     params.push(new Date(Date.now() - options.sinceDays * 86_400_000).toISOString());
+  }
+
+  if (options.collectedSinceDays !== undefined) {
+    clauses.push('collected_at >= ?');
+    params.push(
+      new Date(Date.now() - options.collectedSinceDays * 86_400_000).toISOString(),
+    );
   }
 
   // Scoping to explicit ids is what makes `--relabel` mean "redo these",
@@ -445,7 +482,7 @@ export function markAlerted(ids: string[], at: string): void {
  * those instead of sweeping up the entire pending backlog.
  */
 export function clearClassifications(
-  options: { before?: string; onlyWithContext?: boolean } = {},
+  options: { before?: string; onlyWithContext?: boolean; sinceDays?: number } = {},
 ): string[] {
   const clauses = ['sentiment IS NOT NULL'];
   const params: unknown[] = [];
@@ -453,6 +490,13 @@ export function clearClassifications(
   if (options.before) {
     clauses.push('classified_at < ?');
     params.push(options.before);
+  }
+  // Must mirror whatever window the caller will re-classify. Clearing wider
+  // than that would strip labels this run then declines to restore, and the
+  // originals are gone — there is nothing to roll back to.
+  if (options.sinceDays !== undefined) {
+    clauses.push('published_at >= ?');
+    params.push(new Date(Date.now() - options.sinceDays * 86_400_000).toISOString());
   }
   if (options.onlyWithContext) {
     clauses.push(

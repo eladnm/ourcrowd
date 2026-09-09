@@ -102,7 +102,13 @@ export async function runExport(now: Date = new Date(), options: { force?: boole
       mentionsClassified: stats.classified,
       mentionsRelevant: relevant.length,
       mentionsIrrelevant: mentions.length - relevant.length,
+      // Named separately because `sentiment` below counts only this window.
+      // Today every relevant mention happens to fall inside the quarter, so
+      // the two agree — once collection spans more than 90 days they will not,
+      // and a reader needs the figure the sentiment block actually sums to.
+      quarterMentionsRelevant: inQuarter.length,
     },
+    /** Scoped to the trailing quarter — sums to `totals.quarterMentionsRelevant`. */
     sentiment: {
       positive: inQuarter.filter((m) => m.sentiment === 'positive').length,
       negative: inQuarter.filter((m) => m.sentiment === 'negative').length,

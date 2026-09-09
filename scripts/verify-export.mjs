@@ -68,8 +68,15 @@ check(
   Object.values(summary.statusBreakdown).reduce((a, b) => a + b, 0) === companies.length,
 );
 check(
-  'sentiment totals do not exceed the relevant mentions',
-  Object.values(summary.sentiment).reduce((a, b) => a + b, 0) <= relevant.length,
+  'sentiment totals sum exactly to the quarter relevant count',
+  // Exact, not <=: a loose check here is what let the quarter-scoped sentiment
+  // block drift from the all-time relevant total without anything noticing.
+  Object.values(summary.sentiment).reduce((a, b) => a + b, 0) ===
+    summary.totals.quarterMentionsRelevant,
+);
+check(
+  'the quarter relevant count never exceeds the all-time one',
+  summary.totals.quarterMentionsRelevant <= summary.totals.mentionsRelevant,
 );
 check(
   'a company reporting no coverage really has none',
@@ -82,4 +89,4 @@ if (failures.length > 0) {
   console.error(`\n${failures.length} check(s) failed.`);
   process.exit(1);
 }
-console.log(`\nAll ${14} checks passed — ${mentions.length} mentions, ${companies.length} companies.`);
+console.log(`\nAll ${15} checks passed — ${mentions.length} mentions, ${companies.length} companies.`);

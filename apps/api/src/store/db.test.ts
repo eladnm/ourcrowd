@@ -197,3 +197,40 @@ test('relabelling classifies only what it cleared, not the whole backlog', () =>
     ['labelled'],
   );
 });
+
+test('the daily window can bound by collection time, not publication date', () => {
+  // Regression: Google News `when:2d` is an indexing window, so a daily
+  // collect returns older articles. Bounding the daily classify on
+  // published_at skipped those on every run — the cutoff only moves forward —
+  // leaving them permanently unlabelled and never alerted on.
+  const longAgo = new Date(Date.now() - 40 * 864e5).toISOString();
+  insertMentions([
+    mention('old-but-new-to-us', { publishedAt: longAgo, collectedAt: new Date().toISOString() }),
+  ]);
+
+  assert.equal(getUnclassifiedMentions({ sinceDays: 2 }).length, 0, 'pubDate window misses it');
+  assert.deepEqual(
+    getUnclassifiedMentions({ collectedSinceDays: 2 }).map((m) => m.id),
+    ['old-but-new-to-us'],
+    'collection window catches it',
+  );
+});
+
+test('relabelling never clears wider than the window it re-classifies', () => {
+  // Regression: --relabel with --since cleared labels across the whole
+  // database but only re-classified those inside the window, destroying the
+  // rest with nothing to restore from.
+  upsertCompanies([{ id: 'acme', name: 'Acme', ticker: 'ACME' }]);
+  const longAgo = new Date(Date.now() - 200 * 864e5).toISOString();
+  insertMentions([mention('recent'), mention('ancient', { publishedAt: longAgo })]);
+  classify('recent');
+  classify('ancient');
+
+  const cleared = clearClassifications({ onlyWithContext: true, sinceDays: 30 });
+  assert.deepEqual(cleared, ['recent']);
+  assert.equal(
+    getClassifiedMentions().some((m) => m.id === 'ancient'),
+    true,
+    'a label outside the window must survive',
+  );
+});

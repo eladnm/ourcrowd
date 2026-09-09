@@ -54,7 +54,12 @@ export function parseArgs(argv: string[]): CliArgs {
         args.relabelAll = true;
         break;
       case '--relabel-before': {
-        if (value && !Number.isNaN(Date.parse(value))) args.relabelBefore = value;
+        // Implies --relabel: passing only a cutoff and silently doing nothing
+        // is never what the caller meant.
+        if (value && !Number.isNaN(Date.parse(value))) {
+          args.relabelBefore = value;
+          args.relabel = true;
+        }
         i++;
         break;
       }

@@ -133,10 +133,10 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 6,
+    "quarterMentionCount": 7,
     "sentimentBreakdown": {
       "positive": 2,
-      "negative": 3,
+      "negative": 4,
       "neutral": 1
     }
   },
@@ -247,11 +247,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 17,
+    "quarterMentionCount": 20,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 17
+      "neutral": 20
     }
   },
   {
@@ -388,9 +388,9 @@
     "daysSinceLastMention": 8,
     "status": "recent",
     "label": "last mentioned 8 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }
@@ -601,11 +601,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 26,
+    "quarterMentionCount": 29,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 26
+      "neutral": 29
     }
   },
   {
@@ -657,11 +657,11 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 3,
       "negative": 1,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1092,9 +1092,9 @@
     "companyId": "fireblade",
     "companyName": "Fireblade",
     "lastMentionedAt": "2026-09-04T07:45:35.000Z",
-    "daysSinceLastMention": 4,
+    "daysSinceLastMention": 5,
     "status": "active",
-    "label": "last mentioned 4 days ago",
+    "label": "last mentioned 5 days ago",
     "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
@@ -1170,10 +1170,10 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 0,
+      "negative": 1,
       "neutral": 1
     }
   },
@@ -1226,11 +1226,11 @@
     "daysSinceLastMention": 6,
     "status": "active",
     "label": "last mentioned 6 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1327,11 +1327,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -1709,9 +1709,9 @@
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 13,
+    "quarterMentionCount": 15,
     "sentimentBreakdown": {
-      "positive": 12,
+      "positive": 14,
       "negative": 1,
       "neutral": 0
     }
@@ -1770,11 +1770,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 13,
+    "quarterMentionCount": 14,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 3,
-      "neutral": 6
+      "neutral": 7
     }
   },
   {
@@ -1885,11 +1885,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 10,
+    "quarterMentionCount": 11,
     "sentimentBreakdown": {
       "positive": 5,
       "negative": 0,
-      "neutral": 5
+      "neutral": 6
     }
   },
   {
@@ -2367,11 +2367,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
       "positive": 1,
       "negative": 0,
-      "neutral": 3
+      "neutral": 4
     }
   },
   {
@@ -2493,9 +2493,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 4,
+    "quarterMentionCount": 5,
     "sentimentBreakdown": {
-      "positive": 2,
+      "positive": 3,
       "negative": 0,
       "neutral": 2
     }
@@ -2632,15 +2632,15 @@
     "aliases": [
       "Safe Superintelligence"
     ],
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-29T07:00:00.000Z",
+    "daysSinceLastMention": 11,
+    "status": "recent",
+    "label": "last mentioned 11 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
       "positive": 0,
       "negative": 0,
-      "neutral": 0
+      "neutral": 1
     }
   },
   {
@@ -2678,9 +2678,9 @@
     "daysSinceLastMention": 7,
     "status": "active",
     "label": "last mentioned 7 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 3,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 1
     }
@@ -2861,10 +2861,10 @@
     "daysSinceLastMention": 6,
     "status": "active",
     "label": "last mentioned 6 days ago",
-    "quarterMentionCount": 2,
+    "quarterMentionCount": 4,
     "sentimentBreakdown": {
       "positive": 0,
-      "negative": 1,
+      "negative": 3,
       "neutral": 1
     }
   },
@@ -2889,11 +2889,11 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 9,
+    "quarterMentionCount": 13,
     "sentimentBreakdown": {
-      "positive": 6,
-      "negative": 2,
-      "neutral": 1
+      "positive": 7,
+      "negative": 3,
+      "neutral": 3
     }
   },
   {
@@ -2917,11 +2917,11 @@
     "daysSinceLastMention": 1,
     "status": "active",
     "label": "last mentioned yesterday",
-    "quarterMentionCount": 10,
+    "quarterMentionCount": 11,
     "sentimentBreakdown": {
       "positive": 4,
       "negative": 1,
-      "neutral": 5
+      "neutral": 6
     }
   },
   {
@@ -2987,10 +2987,10 @@
     "daysSinceLastMention": 4,
     "status": "active",
     "label": "last mentioned 4 days ago",
-    "quarterMentionCount": 7,
+    "quarterMentionCount": 9,
     "sentimentBreakdown": {
-      "positive": 3,
-      "negative": 4,
+      "positive": 4,
+      "negative": 5,
       "neutral": 0
     }
   },
@@ -3226,9 +3226,9 @@
     "daysSinceLastMention": 0,
     "status": "active",
     "label": "last mentioned today",
-    "quarterMentionCount": 17,
+    "quarterMentionCount": 18,
     "sentimentBreakdown": {
-      "positive": 14,
+      "positive": 15,
       "negative": 1,
       "neutral": 2
     }
@@ -3236,13 +3236,13 @@
   {
     "companyId": "tovala",
     "companyName": "Tovala",
-    "lastMentionedAt": null,
-    "daysSinceLastMention": null,
-    "status": "none",
-    "label": "no coverage found",
-    "quarterMentionCount": 0,
+    "lastMentionedAt": "2026-08-31T07:00:00.000Z",
+    "daysSinceLastMention": 9,
+    "status": "recent",
+    "label": "last mentioned 9 days ago",
+    "quarterMentionCount": 1,
     "sentimentBreakdown": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
       "neutral": 0
     }
@@ -3352,9 +3352,9 @@
     "daysSinceLastMention": 8,
     "status": "recent",
     "label": "last mentioned 8 days ago",
-    "quarterMentionCount": 1,
+    "quarterMentionCount": 2,
     "sentimentBreakdown": {
-      "positive": 1,
+      "positive": 2,
       "negative": 0,
       "neutral": 0
     }

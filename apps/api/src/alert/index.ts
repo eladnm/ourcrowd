@@ -40,8 +40,12 @@ function groupByCompany(payload: AlertPayload): Map<string, Mention[]> {
 }
 
 /** Companies with negative coverage first — that is what needs a human today. */
-function orderedCompanyEntries(payload: AlertPayload): [string, Mention[]][] {
-  return [...groupByCompany(payload).entries()].sort(([, a], [, b]) => {
+/**
+ * Companies ordered worst-news-first. Takes the already-built grouping so the
+ * formatters do not walk and re-group every mention a second time.
+ */
+function orderedCompanyEntries(grouped: Map<string, Mention[]>): [string, Mention[]][] {
+  return [...grouped.entries()].sort(([, a], [, b]) => {
     const negA = a.filter((m) => m.sentiment === 'negative').length;
     const negB = b.filter((m) => m.sentiment === 'negative').length;
     return negB - negA || b.length - a.length;
@@ -59,7 +63,7 @@ export function formatConsoleAlert(payload: AlertPayload): string {
   }
 
   const grouped = groupByCompany(payload);
-  const ordered = orderedCompanyEntries(payload);
+  const ordered = orderedCompanyEntries(grouped);
   const negative = mentions.filter((m) => m.sentiment === 'negative').length;
 
   const lines: string[] = [
@@ -118,7 +122,7 @@ export function formatConsoleAlert(payload: AlertPayload): string {
 /** Slack-compatible payload; also fine for any generic JSON webhook. */
 export function formatWebhookPayload(payload: AlertPayload): Record<string, unknown> {
   const grouped = groupByCompany(payload);
-  const ordered = orderedCompanyEntries(payload);
+  const ordered = orderedCompanyEntries(grouped);
   const negative = payload.mentions.filter((m) => m.sentiment === 'negative').length;
 
   const summary =
@@ -165,10 +169,11 @@ function escapeSlack(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-async function postWebhook(payload: AlertPayload): Promise<void> {
+/** Returns whether the webhook actually accepted the alert. */
+async function postWebhook(payload: AlertPayload): Promise<boolean> {
   if (!config.alert.webhookUrl) {
     log.warn('ALERT_CHANNEL includes webhook but ALERT_WEBHOOK_URL is unset — skipping.');
-    return;
+    return false;
   }
   try {
     const response = await fetch(config.alert.webhookUrl, {
@@ -179,19 +184,26 @@ async function postWebhook(payload: AlertPayload): Promise<void> {
     });
     if (!response.ok) {
       log.error(`webhook returned HTTP ${response.status}: ${await response.text()}`);
-      return;
+      return false;
     }
     log.info('webhook alert delivered');
+    return true;
   } catch (error) {
-    // A delivery failure must not fail the run — the mentions are already
-    // stored, and the next run will re-alert anything still unalerted.
+    // A delivery failure must not crash the run — the mentions are already
+    // stored. Reporting false keeps them unalerted so the next run retries,
+    // which is only true if the caller declines to mark them.
     log.error(`webhook delivery failed: ${String(error)}`);
+    return false;
   }
 }
 
 /**
  * Send the alert on every configured channel.
- * Returns true if at least one channel accepted it.
+ *
+ * Returns true only if a channel genuinely accepted it. The caller marks
+ * mentions as alerted on the strength of this, and a mention marked after a
+ * failed delivery is never re-sent — so a webhook that 500s must report
+ * failure rather than being swallowed.
  */
 export async function sendAlert(payload: AlertPayload): Promise<boolean> {
   const { channel } = config.alert;
@@ -202,8 +214,8 @@ export async function sendAlert(payload: AlertPayload): Promise<boolean> {
     delivered = true;
   }
   if (channel === 'webhook' || channel === 'both') {
-    await postWebhook(payload);
-    delivered = true;
+    const posted = await postWebhook(payload);
+    delivered = delivered || posted;
   }
   return delivered;
 }

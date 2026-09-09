@@ -6,9 +6,14 @@
  *
  * A 2-day collection window is deliberate: feeds can lag, and re-seeing an
  * article we already stored is free thanks to the mention-id dedupe.
- * Classification is scoped to the same 2-day window, so a leftover quarterly
- * backlog cannot turn the daily job into an overnight run. What makes an
- * alert "new" is alerted_at being NULL, not the publication date.
+ *
+ * Classification is scoped by *collection* time, not publication time. Google
+ * News `when:2d` is an indexing window, so a daily collect routinely returns
+ * articles published weeks earlier; filtering the classify step on pubDate
+ * would skip those today and on every later run — the cutoff only moves
+ * forward — leaving them permanently unlabelled and never alerted on. Bounding
+ * by collected_at still keeps a leftover quarterly backlog out of the daily
+ * job. What makes an alert "new" is alerted_at being NULL.
  */
 import { log } from '../lib/logger.ts';
 import { AlreadyReportedError } from '../lib/errors.ts';
@@ -23,9 +28,9 @@ const DAILY_WINDOW_DAYS = 2;
 export async function runDailyAlert(options: { dryRun?: boolean; skipCollect?: boolean } = {}) {
   if (!options.skipCollect) {
     await runCollect({ days: DAILY_WINDOW_DAYS });
-    // Narrow classify to the same window. Without this, a leftover quarterly
-    // backlog would turn the daily job into a 16-hour classify run.
-    await runClassify({ sinceDays: DAILY_WINDOW_DAYS });
+    // Label whatever this run just collected — regardless of how old the
+    // article itself is — while leaving any older backlog alone.
+    await runClassify({ collectedSinceDays: DAILY_WINDOW_DAYS });
   }
 
   const pending = getUnalertedMentions();
@@ -38,7 +43,14 @@ export async function runDailyAlert(options: { dryRun?: boolean; skipCollect?: b
   }
 
   log.step(`Alerting on ${pending.length} new mentions`);
-  await sendAlert({ generatedAt, mentions: pending, companiesById });
+  const delivered = await sendAlert({ generatedAt, mentions: pending, companiesById });
+
+  if (!delivered) {
+    // Marking them now would drop these stories permanently: they would never
+    // appear in getUnalertedMentions() again. Leave them for the next run.
+    log.error('No channel accepted the alert — leaving mentions unalerted so the next run retries.');
+    return { sent: 0, failed: pending.length };
+  }
 
   if (options.dryRun) {
     log.warn('--dry-run: mentions left unmarked, so the next run will alert on them again.');

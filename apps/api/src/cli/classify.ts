@@ -28,6 +28,7 @@ export async function runClassify(
   options: {
     limit?: number;
     sinceDays?: number;
+    collectedSinceDays?: number;
     companyIds?: string[];
     relabel?: boolean;
     relabelAll?: boolean;
@@ -55,6 +56,8 @@ export async function runClassify(
     relabelled = clearClassifications({
       before: options.relabelBefore,
       onlyWithContext: !options.relabelAll,
+      // Clear no wider than we are about to re-classify.
+      sinceDays: options.sinceDays,
     });
     log.info(
       `Cleared ${relabelled.length} existing label${relabelled.length === 1 ? '' : 's'} for re-classification` +
@@ -65,6 +68,7 @@ export async function runClassify(
   const pending = getUnclassifiedMentions({
     limit: options.limit,
     sinceDays: options.sinceDays,
+    collectedSinceDays: options.collectedSinceDays,
     companyIds: options.companyIds,
     mentionIds: relabelled,
   });

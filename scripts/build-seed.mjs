@@ -219,6 +219,27 @@ for (const line of lines) {
   });
 }
 
+// The lookup tables above are keyed by display name, which the raw list can
+// change from under us — a rename silently drops that company's sector, ticker
+// and search query while the script still reports success. Fail loudly instead.
+const knownNames = new Set(companies.map((c) => c.name));
+const orphans = [];
+for (const [table, keys] of [
+  ['SECTORS', Object.keys(SECTORS)],
+  ['TICKERS', Object.keys(TICKERS)],
+  ['DISAMBIGUATION', Object.keys(DISAMBIGUATION)],
+]) {
+  for (const key of keys) {
+    if (!knownNames.has(key)) orphans.push(`${table}["${key}"]`);
+  }
+}
+if (orphans.length > 0) {
+  console.error('These entries match no company in the source list:');
+  for (const orphan of orphans) console.error(`  ${orphan}`);
+  console.error('A company was probably renamed. Fix the key or drop the entry.');
+  process.exit(1);
+}
+
 writeFileSync(
   'data/companies.json',
   JSON.stringify({ source: 'OurCrowd portfolio + fund companies', count: companies.length, companies }, null, 2) + '\n',
