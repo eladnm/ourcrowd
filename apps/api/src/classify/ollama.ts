@@ -57,8 +57,11 @@ export async function checkOllama(): Promise<{ ok: boolean; message: string }> {
 /**
  * Models sometimes wrap JSON in prose or a code fence even under `format: json`.
  * Take the first balanced object rather than trusting the whole string.
+ *
+ * Exported for tests: this and `validate` are the guard between model output
+ * and the database, so they are worth testing without a live daemon.
  */
-function extractJson(content: string): unknown {
+export function extractJson(content: string): unknown {
   const trimmed = content.trim();
   try {
     return JSON.parse(trimmed);
@@ -76,7 +79,7 @@ function extractJson(content: string): unknown {
  * Coerce the model's object into a Classification, rejecting anything that
  * does not match the schema. A hallucinated label must not reach the database.
  */
-function validate(raw: unknown, model: string): Classification {
+export function validate(raw: unknown, model: string): Classification {
   if (typeof raw !== 'object' || raw === null) {
     throw new Error('model output was not an object');
   }
