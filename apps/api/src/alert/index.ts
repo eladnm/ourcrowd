@@ -13,6 +13,15 @@ import { log } from '../lib/logger.ts';
 
 const SENTIMENT_ICON = { positive: '📈', negative: '📉', neutral: '➖' } as const;
 
+/**
+ * Caps on the console alert. A daily run reports a handful of mentions, but a
+ * first run after a backfill can have hundreds — and an alert too long to read
+ * is not an alert. Companies are ordered worst-news-first, so the cap keeps
+ * what matters and points at the dashboard for the tail.
+ */
+const MAX_CONSOLE_COMPANIES = 20;
+const MAX_CONSOLE_MENTIONS_PER_COMPANY = 5;
+
 export interface AlertPayload {
   generatedAt: string;
   mentions: Mention[];
@@ -63,9 +72,15 @@ export function formatConsoleAlert(payload: AlertPayload): string {
     return negB - negA || b.length - a.length;
   });
 
-  for (const [companyId, items] of ordered) {
+  // A backfill can leave hundreds of mentions unalerted, and a 1,400-line
+  // wall of text in a terminal is an alert nobody reads. Cap the detail and
+  // say what was withheld — the dashboard has the rest.
+  const shown = ordered.slice(0, MAX_CONSOLE_COMPANIES);
+
+  for (const [companyId, items] of shown) {
     lines.push('', `${companyName(payload, companyId)} (${items.length})`);
-    for (const mention of items) {
+
+    for (const mention of items.slice(0, MAX_CONSOLE_MENTIONS_PER_COMPANY)) {
       const date = mention.publishedAt.slice(0, 10);
       lines.push(
         `  ${SENTIMENT_ICON[mention.sentiment]} [${mention.sentiment}] ${mention.title}`,
@@ -74,6 +89,23 @@ export function formatConsoleAlert(payload: AlertPayload): string {
       );
       if (mention.reasoning) lines.push(`     ↳ ${mention.reasoning}`);
     }
+
+    const hidden = items.length - MAX_CONSOLE_MENTIONS_PER_COMPANY;
+    if (hidden > 0) lines.push(`     …and ${hidden} more for this company`);
+  }
+
+  const remainingCompanies = ordered.length - shown.length;
+  if (remainingCompanies > 0) {
+    const remainingMentions = ordered
+      .slice(MAX_CONSOLE_COMPANIES)
+      .reduce((total, [, items]) => total + items.length, 0);
+    lines.push(
+      '',
+      '-'.repeat(72),
+      `  …and ${remainingMentions} more mention${remainingMentions === 1 ? '' : 's'} ` +
+        `across ${remainingCompanies} further compan${remainingCompanies === 1 ? 'y' : 'ies'}.`,
+      '  See the dashboard for the full list.',
+    );
   }
 
   lines.push('', '='.repeat(72), '');

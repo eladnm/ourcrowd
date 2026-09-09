@@ -74,3 +74,38 @@ test('slack control characters in titles are escaped', () => {
   const body = formatWebhookPayload(payload([mention({ title: 'Acme <b> & "Co"' })]));
   assert.match(JSON.stringify(body.blocks), /&lt;b&gt; &amp;/);
 });
+
+/** Build N mentions spread across M companies, for the capping tests. */
+function bulk(companyCount: number, perCompany: number): Mention[] {
+  const out: Mention[] = [];
+  for (let c = 0; c < companyCount; c++) {
+    const companyId = `co-${c}`;
+    companiesById.set(companyId, { id: companyId, name: `Company ${c}` });
+    for (let m = 0; m < perCompany; m++) {
+      out.push(mention({ id: `${companyId}-${m}`, companyId, sentiment: 'neutral' }));
+    }
+  }
+  return out;
+}
+
+test('a large console alert stays readable instead of dumping everything', () => {
+  const output = formatConsoleAlert(payload(bulk(60, 8)));
+  const lines = output.split('\n').length;
+  assert.ok(lines < 500, `expected a capped alert, got ${lines} lines`);
+});
+
+test('the console alert says how much it withheld', () => {
+  const output = formatConsoleAlert(payload(bulk(60, 8)));
+  assert.match(output, /more mentions across 40 further companies/);
+  assert.match(output, /more for this company/);
+});
+
+test('the header still reports the true totals, not the capped ones', () => {
+  const output = formatConsoleAlert(payload(bulk(60, 8)));
+  assert.match(output, /480 new mentions across 60 companies/);
+});
+
+test('a small alert is not truncated at all', () => {
+  const output = formatConsoleAlert(payload(bulk(2, 2)));
+  assert.doesNotMatch(output, /and \d+ more/);
+});
