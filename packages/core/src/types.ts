@@ -75,6 +75,9 @@ export type MentionStatusLevel =
 export interface CompanyStatus {
   companyId: string;
   companyName: string;
+  /** Former names — used for search, not displayed in the table. */
+  aliases?: string[];
+  ticker?: string;
   lastMentionedAt: string | null;
   daysSinceLastMention: number | null;
   status: MentionStatusLevel;

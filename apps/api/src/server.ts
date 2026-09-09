@@ -12,6 +12,7 @@ import {
   getCompanies,
   getMentionsForCompany,
   getStats,
+  prepareStore,
 } from './store/db.ts';
 
 /**
@@ -23,6 +24,11 @@ import {
  */
 export function buildServer() {
   const app = Fastify({ logger: false });
+
+  const prepared = prepareStore();
+  if (prepared.hydrated > 0) {
+    log.info(`Loaded ${prepared.hydrated} classified mentions from data/mentions.json`);
+  }
 
   app.register(cors, { origin: true });
 
@@ -55,7 +61,12 @@ export function buildServer() {
     }
     if (query.search) {
       const needle = query.search.toLowerCase();
-      filtered = filtered.filter((s) => s.companyName.toLowerCase().includes(needle));
+      filtered = filtered.filter(
+        (s) =>
+          s.companyName.toLowerCase().includes(needle) ||
+          s.aliases?.some((alias) => alias.toLowerCase().includes(needle)) ||
+          s.ticker?.toLowerCase() === needle,
+      );
     }
 
     return {

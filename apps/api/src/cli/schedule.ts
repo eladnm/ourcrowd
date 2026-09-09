@@ -12,12 +12,21 @@ import { runDailyAlert } from './alert.ts';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+let running = false;
+
 async function tick() {
+  if (running) {
+    log.warn('previous daily run still in progress — skipping this tick');
+    return;
+  }
+  running = true;
   try {
     await runDailyAlert();
   } catch (error) {
     // Never let one bad day kill the scheduler.
     log.error(`daily run failed: ${String(error)}`);
+  } finally {
+    running = false;
   }
 }
 

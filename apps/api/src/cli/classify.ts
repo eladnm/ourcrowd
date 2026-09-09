@@ -19,8 +19,8 @@ import { AlreadyReportedError } from '../lib/errors.ts';
 import {
   clearClassifications,
   finishRun,
-  getCompanies,
   getUnclassifiedMentions,
+  loadCompanies,
   startRun,
 } from '../store/db.ts';
 
@@ -42,6 +42,11 @@ export async function runClassify(
     throw new AlreadyReportedError('Ollama unavailable');
   }
   log.info(health.message);
+
+  // Reload the seed before relabel/classify so a ticker or sector added to
+  // companies.json actually reaches the prompt (and the onlyWithContext
+  // filter) rather than using whatever was last upserted during collect.
+  const companies = loadCompanies();
 
   // When relabelling, classify exactly what was cleared. Otherwise a prompt
   // tweak would drag the whole pending backlog along with it.
@@ -68,7 +73,7 @@ export async function runClassify(
     return { classified: 0, failed: 0, irrelevant: 0 };
   }
 
-  const companiesById = new Map(getCompanies().map((c) => [c.id, c]));
+  const companiesById = new Map(companies.map((c) => [c.id, c]));
   const scope = options.sinceDays ? ` published in the last ${options.sinceDays} days` : '';
   log.step(`Classifying ${pending.length} mentions${scope} with ${config.ollama.model}`);
 

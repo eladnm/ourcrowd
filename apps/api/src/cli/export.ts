@@ -12,7 +12,7 @@
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import { computeCompanyStatus, quarterStart } from '@ourcrowd/core';
+import { computeCompanyStatus, isWithinQuarter, quarterStart } from '@ourcrowd/core';
 import type { CompanyStatus, Mention } from '@ourcrowd/core';
 import { config, ROOT } from '../config.ts';
 import { log } from '../lib/logger.ts';
@@ -90,6 +90,7 @@ export async function runExport(now: Date = new Date(), options: { force?: boole
   );
 
   const relevant = mentions.filter((m) => m.relevance === 'relevant');
+  const inQuarter = relevant.filter((m) => isWithinQuarter(m, now));
   const summary = {
     generatedAt: now.toISOString(),
     quarterStart: quarterStart(now).toISOString(),
@@ -103,9 +104,9 @@ export async function runExport(now: Date = new Date(), options: { force?: boole
       mentionsIrrelevant: mentions.length - relevant.length,
     },
     sentiment: {
-      positive: relevant.filter((m) => m.sentiment === 'positive').length,
-      negative: relevant.filter((m) => m.sentiment === 'negative').length,
-      neutral: relevant.filter((m) => m.sentiment === 'neutral').length,
+      positive: inQuarter.filter((m) => m.sentiment === 'positive').length,
+      negative: inQuarter.filter((m) => m.sentiment === 'negative').length,
+      neutral: inQuarter.filter((m) => m.sentiment === 'neutral').length,
     },
     statusBreakdown: {
       active: statuses.filter((s) => s.status === 'active').length,

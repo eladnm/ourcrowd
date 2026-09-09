@@ -27,13 +27,28 @@ interface RssItem {
 }
 
 /**
+ * Former names shorter than this are classification hints only. OR-ing
+ * "Edge" into Ludeo's query would drown the feed; "Safe Superintelligence"
+ * or "ReWalk" are distinctive enough to search.
+ */
+const MIN_SEARCHABLE_ALIAS_LENGTH = 5;
+
+/**
  * Build the query for a company. `searchQuery` wins when set (common-word
- * names); otherwise the name is quoted so Google treats it as a phrase.
- * `when:{n}d` bounds the window server-side so we fetch less and filter less.
+ * names). Otherwise the name is quoted as a phrase, distinctive aliases are
+ * OR'd in, and a domain hint (e.g. lambda.ai) is appended so "Lambda" is not
+ * just AWS Lambda / Lambda Legal. `when:{n}d` bounds the window server-side.
  */
 export function buildQuery(company: Company, windowDays: number): string {
-  const base = company.searchQuery ?? `"${company.name}"`;
-  return `${base} when:${windowDays}d`;
+  if (company.searchQuery) return `${company.searchQuery} when:${windowDays}d`;
+
+  const terms = [`"${company.name}"`];
+  for (const alias of company.aliases ?? []) {
+    if (alias.length >= MIN_SEARCHABLE_ALIAS_LENGTH) terms.push(`"${alias}"`);
+  }
+  const nameClause = terms.length === 1 ? terms[0] : `(${terms.join(' OR ')})`;
+  const withDomain = company.domain ? `${nameClause} ${company.domain}` : nameClause;
+  return `${withDomain} when:${windowDays}d`;
 }
 
 export function feedUrl(company: Company, windowDays: number): string {

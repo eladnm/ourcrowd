@@ -39,6 +39,15 @@ function groupByCompany(payload: AlertPayload): Map<string, Mention[]> {
   return grouped;
 }
 
+/** Companies with negative coverage first — that is what needs a human today. */
+function orderedCompanyEntries(payload: AlertPayload): [string, Mention[]][] {
+  return [...groupByCompany(payload).entries()].sort(([, a], [, b]) => {
+    const negA = a.filter((m) => m.sentiment === 'negative').length;
+    const negB = b.filter((m) => m.sentiment === 'negative').length;
+    return negB - negA || b.length - a.length;
+  });
+}
+
 function companyName(payload: AlertPayload, companyId: string): string {
   return payload.companiesById.get(companyId)?.name ?? companyId;
 }
@@ -50,6 +59,7 @@ export function formatConsoleAlert(payload: AlertPayload): string {
   }
 
   const grouped = groupByCompany(payload);
+  const ordered = orderedCompanyEntries(payload);
   const negative = mentions.filter((m) => m.sentiment === 'negative').length;
 
   const lines: string[] = [
@@ -64,13 +74,6 @@ export function formatConsoleAlert(payload: AlertPayload): string {
     lines.push(`  ⚠  ${negative} negative mention${negative === 1 ? '' : 's'} — review first.`);
     lines.push('-'.repeat(72));
   }
-
-  // Companies with negative coverage first: that is what needs a human today.
-  const ordered = [...grouped.entries()].sort(([, a], [, b]) => {
-    const negA = a.filter((m) => m.sentiment === 'negative').length;
-    const negB = b.filter((m) => m.sentiment === 'negative').length;
-    return negB - negA || b.length - a.length;
-  });
 
   // A backfill can leave hundreds of mentions unalerted, and a 1,400-line
   // wall of text in a terminal is an alert nobody reads. Cap the detail and
@@ -115,6 +118,7 @@ export function formatConsoleAlert(payload: AlertPayload): string {
 /** Slack-compatible payload; also fine for any generic JSON webhook. */
 export function formatWebhookPayload(payload: AlertPayload): Record<string, unknown> {
   const grouped = groupByCompany(payload);
+  const ordered = orderedCompanyEntries(payload);
   const negative = payload.mentions.filter((m) => m.sentiment === 'negative').length;
 
   const summary =
@@ -133,7 +137,7 @@ export function formatWebhookPayload(payload: AlertPayload): Record<string, unkn
 
   // Slack rejects payloads over 50 blocks; cap and link to the dashboard.
   const MAX_COMPANIES = 15;
-  for (const [companyId, items] of [...grouped.entries()].slice(0, MAX_COMPANIES)) {
+  for (const [companyId, items] of ordered.slice(0, MAX_COMPANIES)) {
     const lines = items
       .slice(0, 5)
       .map((m) => `${SENTIMENT_ICON[m.sentiment]} <${m.url}|${escapeSlack(m.title)}> _(${m.sentiment})_`);

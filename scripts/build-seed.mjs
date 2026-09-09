@@ -66,12 +66,13 @@ const SECTORS = {
   Skillz: 'mobile games platform',
   MST: 'medical technology',
   Bizzabo: 'event management software',
-  Verse: 'conversational marketing',
+  'Verse.ai': 'conversational marketing',
   Lano: 'global payroll',
   Groq: 'AI inference chips',
   Tovala: 'smart cooking appliances',
   Remilk: 'precision fermentation dairy',
-  Shield: 'fintech compliance software',
+  Lambda: 'GPU cloud infrastructure',
+  SSI: 'AI research laboratory',
 };
 
 /**
@@ -79,6 +80,11 @@ const SECTORS = {
  * that names only the symbol is recognised: an audit of the first run found
  * "Why Did DRTS Stock Surge 22% Today?" being filtered out as unrelated to
  * Alpha Tau, when DRTS is exactly Alpha Tau Medical's NASDAQ ticker.
+ *
+ * Only real tickers for *this* company. Guessing is worse than omitting —
+ * Cyabra is CYAB not CYBR (CyberArk), Momentis is private (MMSI is Merit
+ * Medical), Hailo is private (HLO is Helloworld Travel), Insightec is private,
+ * CarDekho and Klook are not listed.
  */
 const TICKERS = {
   'Alpha Tau': 'DRTS',
@@ -87,18 +93,13 @@ const TICKERS = {
   Skillz: 'SKLZ',
   'Arbe Robotics': 'ARBE',
   Innoviz: 'INVZ',
-  Hailo: 'HLO',
   Lifeward: 'LFWD',
   'Firefly Neuroscience': 'AIFF',
   Freightos: 'CRGO',
-  Cyabra: 'CYBR',
-  'Momentis Surgical': 'MMSI',
+  Cyabra: 'CYAB',
   Zoomcar: 'ZCAR',
-  CarDekho: 'CARDEKHO',
   Viewbix: 'VBIX',
   'The Trendlines Group': 'TRNLY',
-  Insightec: 'INSI',
-  Klook: 'KLOOK',
   Astra: 'ASTR',
 };
 
@@ -153,11 +154,14 @@ const DISAMBIGUATION = {
   Kemtai: 'Kemtai virtual exercise',
   NetOp: 'NetOp network automation',
   Sfara: 'Sfara driver safety',
-  Verse: 'Verse.ai messaging',
   Treedom: 'Treedom tree planting',
   Ynsect: 'Ynsect insect protein',
   wefox: 'wefox insurance',
   Skillz: 'Skillz mobile gaming',
+  Lambda: 'Lambda AI GPU cloud lambda.ai',
+  SSI: 'Safe Superintelligence SSI',
+  MST: 'MST "Medical Surgery Technologies"',
+  'Verse.ai': 'Verse.ai messaging',
 };
 
 /** Names carrying a parenthetical note: "X (formerly Y)" / "X (domain)". */

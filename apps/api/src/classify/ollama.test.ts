@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { extractJson, validate } from './ollama.ts';
+import { extractJson, validate, modelIsAvailable } from './ollama.ts';
 
 /**
  * These two functions are the guard between whatever a local model emits and
@@ -80,4 +80,14 @@ test('runaway reasoning is truncated', () => {
 
 test('missing reasoning is tolerated as empty', () => {
   assert.equal(validate({ relevance: 'relevant', sentiment: 'neutral' }, 'm').reasoning, '');
+});
+
+test('a tagged model name does not match a different tag of the same family', () => {
+  assert.equal(modelIsAvailable(['llama3.1:70b'], 'llama3.1:8b'), false);
+  assert.equal(modelIsAvailable(['llama3.1:8b'], 'llama3.1:8b'), true);
+});
+
+test('a bare model name matches any pulled tag of that model', () => {
+  assert.equal(modelIsAvailable(['llama3.1:8b'], 'llama3.1'), true);
+  assert.equal(modelIsAvailable(['mistral:7b'], 'llama3.1'), false);
 });

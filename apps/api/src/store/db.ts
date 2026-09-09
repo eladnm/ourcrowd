@@ -1,6 +1,6 @@
 import { DatabaseSync } from 'node:sqlite';
-import { mkdirSync, readFileSync } from 'node:fs';
-import { dirname } from 'node:path';
+import { mkdirSync, readFileSync, existsSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import { config } from '../config.ts';
 import type { Company, Mention, RawMention, Classification } from '@ourcrowd/core';
 
@@ -167,6 +167,60 @@ export function upsertCompanies(companies: Company[]): Company[] {
     }
   });
   return companies;
+}
+
+/**
+ * Load the seed list, and if this database has no classified mentions yet,
+ * import the committed `data/mentions.json` snapshot.
+ *
+ * That is what lets a reviewer run `pnpm api` against a fresh clone and see
+ * the dashboard populated — `press.db` is gitignored, the JSON export is the
+ * reviewable artefact.
+ */
+export function prepareStore(): { companies: number; hydrated: number } {
+  const companies = loadCompanies();
+  const hydrated = hydrateFromExportIfEmpty();
+  return { companies: companies.length, hydrated };
+}
+
+function hydrateFromExportIfEmpty(): number {
+  if (getStats().mentions > 0) return 0;
+
+  const mentionsPath = join(config.exportDir, 'mentions.json');
+  if (!existsSync(mentionsPath)) return 0;
+
+  let mentions: Mention[];
+  try {
+    const parsed: unknown = JSON.parse(readFileSync(mentionsPath, 'utf8'));
+    if (!Array.isArray(parsed) || parsed.length === 0) return 0;
+    mentions = parsed as Mention[];
+  } catch {
+    return 0;
+  }
+
+  insertMentions(
+    mentions.map((m) => ({
+      id: m.id,
+      companyId: m.companyId,
+      title: m.title,
+      snippet: m.snippet,
+      url: m.url,
+      source: m.source,
+      publishedAt: m.publishedAt,
+      collectedAt: m.collectedAt,
+    })),
+  );
+  for (const mention of mentions) {
+    saveClassification(mention.id, {
+      sentiment: mention.sentiment,
+      relevance: mention.relevance,
+      confidence: mention.confidence,
+      reasoning: mention.reasoning,
+      model: mention.model,
+      classifiedAt: mention.classifiedAt,
+    });
+  }
+  return mentions.length;
 }
 
 interface CompanyRow {

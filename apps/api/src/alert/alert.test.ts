@@ -70,6 +70,17 @@ test('the webhook payload carries a summary and blocks', () => {
   assert.ok(Array.isArray(body.blocks));
 });
 
+test('the webhook lists companies with negative coverage first', () => {
+  const body = formatWebhookPayload(
+    payload([
+      mention({ id: 'a', companyId: 'acme', sentiment: 'positive' }),
+      mention({ id: 'b', companyId: 'globex', sentiment: 'negative' }),
+    ]),
+  );
+  const serialized = JSON.stringify(body.blocks);
+  assert.ok(serialized.indexOf('Globex') < serialized.indexOf('Acme'));
+});
+
 test('slack control characters in titles are escaped', () => {
   const body = formatWebhookPayload(payload([mention({ title: 'Acme <b> & "Co"' })]));
   assert.match(JSON.stringify(body.blocks), /&lt;b&gt; &amp;/);

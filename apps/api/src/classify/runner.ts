@@ -41,6 +41,7 @@ export async function classifyBatch(
         log.warn(`no company for mention ${mention.id} (${mention.companyId}), skipping`);
         stats.failed++;
         done++;
+        onProgress?.(done, total);
         continue;
       }
 

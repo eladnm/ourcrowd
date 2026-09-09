@@ -73,14 +73,18 @@
     {
       "id": "lambda",
       "name": "Lambda",
-      "domain": "lambda.ai"
+      "domain": "lambda.ai",
+      "sector": "GPU cloud infrastructure",
+      "searchQuery": "Lambda AI GPU cloud lambda.ai"
     },
     {
       "id": "ssi",
       "name": "SSI",
       "aliases": [
         "Safe Superintelligence"
-      ]
+      ],
+      "sector": "AI research laboratory",
+      "searchQuery": "Safe Superintelligence SSI"
     },
     {
       "id": "xai",
@@ -326,8 +330,7 @@
     },
     {
       "id": "cardekho",
-      "name": "CarDekho",
-      "ticker": "CARDEKHO"
+      "name": "CarDekho"
     },
     {
       "id": "one-zero-digital-bank-ltd",
@@ -554,7 +557,7 @@
     {
       "id": "cyabra",
       "name": "Cyabra",
-      "ticker": "CYBR"
+      "ticker": "CYAB"
     },
     {
       "id": "c2a-security",
@@ -645,8 +648,7 @@
       "name": "Momentis Surgical",
       "aliases": [
         "Memic"
-      ],
-      "ticker": "MMSI"
+      ]
     },
     {
       "id": "argus-cyber-security",
@@ -715,7 +717,9 @@
     },
     {
       "id": "verse-ai",
-      "name": "Verse.ai"
+      "name": "Verse.ai",
+      "sector": "conversational marketing",
+      "searchQuery": "Verse.ai messaging"
     },
     {
       "id": "global-kinetics",
@@ -807,7 +811,8 @@
     {
       "id": "mst",
       "name": "MST",
-      "sector": "medical technology"
+      "sector": "medical technology",
+      "searchQuery": "MST \"Medical Surgery Technologies\""
     },
     {
       "id": "bizzabo",
@@ -1089,8 +1094,7 @@
     },
     {
       "id": "insightec",
-      "name": "Insightec",
-      "ticker": "INSI"
+      "name": "Insightec"
     },
     {
       "id": "cognigo",
@@ -1116,8 +1120,7 @@
     },
     {
       "id": "hailo",
-      "name": "Hailo",
-      "ticker": "HLO"
+      "name": "Hailo"
     },
     {
       "id": "sense-education",
@@ -1131,7 +1134,6 @@
       "id": "klook",
       "name": "Klook",
       "sector": "travel experience booking",
-      "ticker": "KLOOK",
       "searchQuery": "Klook travel booking"
     },
     {

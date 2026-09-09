@@ -78,7 +78,9 @@ pnpm export                     # refresh data/ whenever you like
 ### Just want to look at the results?
 
 The `data/` folder holds the output of a real run, so you can review the
-mentions, labels and per-company status without running anything.
+mentions, labels and per-company status without running the pipeline.
+`pnpm api` loads that snapshot into SQLite on first start (`press.db` is
+gitignored), so the dashboard is populated on a fresh clone.
 
 ---
 
@@ -87,10 +89,11 @@ mentions, labels and per-company status without running anything.
 | Command | What it does |
 | --- | --- |
 | `pnpm pipeline` | Collect → classify → export, end to end |
-| `pnpm pipeline -- --since 30` | Same, but only label coverage from the last 30 days |
+| `pnpm pipeline -- --since 30` | Collect *and* label the last 30 days (not a 90-day collect) |
+| `pnpm pipeline -- --days 90 --since 30` | Collect the quarter, label only the last 30 days |
 | `pnpm collect` | Collect only. `--days 90`, `--limit 10` |
 | `pnpm classify` | Label pending mentions. `--since 30`, `--limit 20`, `--relabel` |
-| `pnpm alert` | The daily job: collect 2 days, classify, alert. `--dry-run` |
+| `pnpm alert` | The daily job: collect 2 days, classify that window, alert. `--dry-run` |
 | `pnpm export` | Rewrite `data/*.json` and `data/*.csv` from the database. `--force` |
 | `pnpm api` | Serve the API + built dashboard on :4000 |
 | `pnpm --filter @ourcrowd/dashboard dev` | Dashboard dev server on :3000 |
@@ -320,7 +323,7 @@ exported JSON/CSV.
 ## The daily alert
 
 ```bash
-pnpm alert              # collect 2 days, classify, alert on anything new
+pnpm alert              # collect 2 days, classify that window, alert on anything new
 pnpm alert -- --dry-run # print what would be sent, mark nothing as alerted
 ```
 
@@ -368,10 +371,12 @@ Output of a real run, committed for review:
   useful for a monitoring dashboard that runs continuously.
 - Status thresholds: active ≤ 7d, recent ≤ 30d, stale ≤ 90d, dormant > 90d.
 - The seed list is names only. Where a name was ambiguous, a `searchQuery`
-  override (53 of 258) and a `sector` (49 of 258) were added by hand;
-  parentheticals like "Ludeo (formerly Edge)" became aliases (11) and are both
-  searched and shown. Sectors were not researched for the other ~200 companies,
-  so those rely on the name alone.
+  override and a `sector` were added by hand (see `scripts/build-seed.mjs`);
+  parentheticals like "Ludeo (formerly Edge)" became aliases. Distinctive
+  aliases (5+ characters, e.g. ReWalk, Safe Superintelligence) are OR'd into
+  the news query; short ones like "Edge" would drown the feed, so they are
+  classification hints only. Sectors were not researched for unambiguous
+  names, so those rely on the name alone.
 - An article mentioning two portfolio companies counts once for each.
 
 **Trade-offs**
@@ -423,11 +428,16 @@ Output of a real run, committed for review:
   run found the filter rejecting *"Why Did DRTS Stock Surge 22% Today?"* for
   Alpha Tau, when DRTS is exactly Alpha Tau Medical's NASDAQ ticker. That was
   1 clear false negative in 153 filtered items (~0.7%); the other name-mismatch
-  rejections sampled were correct. Companies now carry a `ticker` (19 of the
-  258 listed ones), the prompt states that ticker-only coverage counts, and
-  both are covered by regression tests. Mentions labelled before this fix were
-  re-classified with `pnpm classify -- --relabel`, which redoes exactly the
-  affected labels.
+  rejections sampled were correct. Companies now carry a `ticker` for the
+  listed names whose symbol we could verify, the prompt states that ticker-only
+  coverage counts, and both are covered by regression tests. Mentions labelled
+  before this fix were re-classified with `pnpm classify -- --relabel`, which
+  redoes exactly the affected labels.
+- **Several seed tickers were the wrong company.** Cyabra had been tagged
+  `CYBR` (CyberArk; Cyabra is `CYAB`), Momentis `MMSI` (Merit Medical), Hailo
+  `HLO` (Helloworld Travel), plus invented symbols for private companies
+  (Insightec, CarDekho, Klook). Those would have made the classifier treat
+  unrelated stock coverage as portfolio news. They are corrected in the seed.
 - **Roughly 40% of collected mentions are filtered as irrelevant.** That is
   high but expected given ~50 common-word company names; the filtered rows are
   kept and shown dimmed so the decision can be audited.

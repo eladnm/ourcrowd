@@ -86,6 +86,8 @@ export function computeCompanyStatus(
   return {
     companyId: company.id,
     companyName: company.name,
+    ...(company.aliases?.length ? { aliases: company.aliases } : {}),
+    ...(company.ticker ? { ticker: company.ticker } : {}),
     lastMentionedAt,
     daysSinceLastMention,
     status: statusFromDays(daysSinceLastMention),

@@ -135,7 +135,12 @@ export default function App() {
 
     const filtered = companies.companies.filter((row) => {
       if (statusFilter !== 'all' && row.status !== statusFilter) return false;
-      if (needle && !row.companyName.toLowerCase().includes(needle)) return false;
+      if (needle) {
+        const inName = row.companyName.toLowerCase().includes(needle);
+        const inAlias = row.aliases?.some((alias) => alias.toLowerCase().includes(needle));
+        const inTicker = row.ticker?.toLowerCase() === needle;
+        if (!inName && !inAlias && !inTicker) return false;
+      }
       return true;
     });
 
@@ -266,8 +271,8 @@ export default function App() {
         {totals.filteredIrrelevant > 0 && (
           <>
             {' '}
-            {totals.filteredIrrelevant} collected item
-            {totals.filteredIrrelevant === 1 ? ' was' : 's were'} filtered out by the model as not
+            {totals.filteredIrrelevant} collected
+            {totals.filteredIrrelevant === 1 ? ' item was' : ' items were'} filtered out by the model as not
             being about the tracked company.
           </>
         )}

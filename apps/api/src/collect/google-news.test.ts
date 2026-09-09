@@ -27,6 +27,21 @@ test('searchQuery overrides the default phrase query', () => {
   assert.equal(buildQuery(shield, 30), 'Shield fintech compliance when:30d');
 });
 
+test('distinctive aliases are OR-ed into the query', () => {
+  const ssi: Company = { id: 'ssi', name: 'SSI', aliases: ['Safe Superintelligence'] };
+  assert.equal(buildQuery(ssi, 90), '("SSI" OR "Safe Superintelligence") when:90d');
+});
+
+test('short aliases like Edge are not searched — they would drown the feed', () => {
+  const ludeo: Company = { id: 'ludeo', name: 'Ludeo', aliases: ['Edge'] };
+  assert.equal(buildQuery(ludeo, 90), '"Ludeo" when:90d');
+});
+
+test('a domain hint is appended so generic names stay anchored', () => {
+  const lambda: Company = { id: 'lambda', name: 'Lambda', domain: 'lambda.ai' };
+  assert.equal(buildQuery(lambda, 90), '"Lambda" lambda.ai when:90d');
+});
+
 test('feed url encodes the query', () => {
   const url = feedUrl(acme, 90);
   assert.match(url, /^https:\/\/news\.google\.com\/rss\/search\?q=/);

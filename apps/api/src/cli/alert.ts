@@ -5,8 +5,10 @@
  *   pnpm alert -- --dry-run   # show what would be sent, mark nothing
  *
  * A 2-day collection window is deliberate: feeds can lag, and re-seeing an
- * article we already stored is free thanks to the mention-id dedupe. What
- * makes an alert "new" is alerted_at being NULL, not the publication date.
+ * article we already stored is free thanks to the mention-id dedupe.
+ * Classification is scoped to the same 2-day window, so a leftover quarterly
+ * backlog cannot turn the daily job into an overnight run. What makes an
+ * alert "new" is alerted_at being NULL, not the publication date.
  */
 import { log } from '../lib/logger.ts';
 import { AlreadyReportedError } from '../lib/errors.ts';
@@ -21,7 +23,9 @@ const DAILY_WINDOW_DAYS = 2;
 export async function runDailyAlert(options: { dryRun?: boolean; skipCollect?: boolean } = {}) {
   if (!options.skipCollect) {
     await runCollect({ days: DAILY_WINDOW_DAYS });
-    await runClassify();
+    // Narrow classify to the same window. Without this, a leftover quarterly
+    // backlog would turn the daily job into a 16-hour classify run.
+    await runClassify({ sinceDays: DAILY_WINDOW_DAYS });
   }
 
   const pending = getUnalertedMentions();

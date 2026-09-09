@@ -66,6 +66,10 @@ export function CompanyDrawer({ companyId, onClose }: { companyId: string; onClo
   }, [onClose]);
 
   const relevant = data?.mentions.filter((m) => m.relevance === 'relevant') ?? [];
+  const quarterRelevant = data?.quarterMentions ?? [];
+  const olderRelevant = relevant.filter(
+    (m) => !quarterRelevant.some((q) => q.id === m.id),
+  );
   const filtered = data?.mentions.filter((m) => m.relevance === 'irrelevant') ?? [];
 
   return (
@@ -86,8 +90,8 @@ export function CompanyDrawer({ companyId, onClose }: { companyId: string; onClo
 
         {data && (
           <p className="muted" style={{ marginTop: 0 }}>
-            {data.status.label} · {data.status.quarterMentionCount} mention
-            {data.status.quarterMentionCount === 1 ? '' : 's'} this quarter
+            {data.status.label} · {data.status.quarterMentionCount}{' '}
+            {data.status.quarterMentionCount === 1 ? 'mention' : 'mentions'} this quarter
             {data.company.aliases?.length ? ` · formerly ${data.company.aliases.join(', ')}` : ''}
           </p>
         )}
@@ -99,9 +103,20 @@ export function CompanyDrawer({ companyId, onClose }: { companyId: string; onClo
           <div className="state">No press coverage found for this company.</div>
         )}
 
-        {relevant.map((mention) => (
+        {quarterRelevant.map((mention) => (
           <MentionRow key={mention.id} mention={mention} />
         ))}
+
+        {olderRelevant.length > 0 && (
+          <>
+            <h3 style={{ fontSize: 12, textTransform: 'uppercase', color: 'var(--muted)', marginTop: 22 }}>
+              Older coverage ({olderRelevant.length})
+            </h3>
+            {olderRelevant.map((mention) => (
+              <MentionRow key={mention.id} mention={mention} />
+            ))}
+          </>
+        )}
 
         {filtered.length > 0 && (
           <>

@@ -19,6 +19,21 @@ interface OllamaChatResponse {
   error?: string;
 }
 
+/**
+ * Whether a pulled model satisfies the configured name.
+ *
+ * Exact tag match only when the config includes a tag (`llama3.1:8b` must
+ * not accept `llama3.1:70b`). A bare name (`llama3.1`) still matches any
+ * tag of that model, which is what `ollama pull llama3.1` installs.
+ */
+export function modelIsAvailable(available: string[], wanted: string): boolean {
+  return available.some((name) => {
+    if (name === wanted) return true;
+    if (!wanted.includes(':') && name.startsWith(`${wanted}:`)) return true;
+    return false;
+  });
+}
+
 /** Confirm the daemon is up and the configured model is pulled. */
 export async function checkOllama(): Promise<{ ok: boolean; message: string }> {
   try {
@@ -30,10 +45,8 @@ export async function checkOllama(): Promise<{ ok: boolean; message: string }> {
     }
     const body = (await response.json()) as { models?: { name: string }[] };
     const available = (body.models ?? []).map((m) => m.name);
-
-    // Ollama reports "llama3.1:8b"; tolerate a configured bare "llama3.1".
     const wanted = config.ollama.model;
-    const present = available.some((name) => name === wanted || name.split(':')[0] === wanted.split(':')[0]);
+    const present = modelIsAvailable(available, wanted);
     if (!present) {
       return {
         ok: false,

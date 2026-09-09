@@ -47,6 +47,16 @@ test('a company with no mentions reports no coverage', () => {
   assert.equal(status.quarterMentionCount, 0);
 });
 
+test('aliases and ticker ride along on the status row for search', () => {
+  const status = computeCompanyStatus(
+    { id: 'acme', name: 'Acme', aliases: ['Acme Inc'], ticker: 'ACME' },
+    [],
+    NOW,
+  );
+  assert.deepEqual(status.aliases, ['Acme Inc']);
+  assert.equal(status.ticker, 'ACME');
+});
+
 test('irrelevant mentions never drive recency or counts', () => {
   const status = computeCompanyStatus(company, [
     mention({ id: 'a', relevance: 'irrelevant', publishedAt: '2026-09-09T00:00:00Z' }),

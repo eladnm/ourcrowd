@@ -5,7 +5,7 @@
   "description": "Press coverage monitoring for OurCrowd portfolio and fund companies",
   "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.5.0"
   },
   "scripts": {
     "dev": "turbo run dev",
