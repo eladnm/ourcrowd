@@ -19,7 +19,8 @@
     "alert": "pnpm --filter @ourcrowd/api alert",
     "export": "pnpm --filter @ourcrowd/api export",
     "api": "pnpm --filter @ourcrowd/api dev",
-    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\" --ignore-path .gitignore"
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\" --ignore-path .gitignore",
+    "verify:data": "node scripts/verify-export.mjs"
   },
   "devDependencies": {
     "prettier": "^3.8.3",

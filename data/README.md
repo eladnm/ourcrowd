@@ -16,6 +16,13 @@ reviewed without re-running the pipeline.
 exports are the reviewable artefact. Regenerate them at any time with
 `pnpm export`.
 
+## Verifying these files
+
+`pnpm verify:data` cross-checks the exports against each other — that every
+company has a status row, that the summary totals match the rows they
+summarise, that no status counts a mention the model filtered out, and that
+every mention carries a source link and the model that labelled it.
+
 ## Reading the numbers
 
 **`mentions.json` contains only classified mentions.** Collection covers the

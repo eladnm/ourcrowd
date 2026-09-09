@@ -96,6 +96,7 @@ mentions, labels and per-company status without running anything.
 | `pnpm --filter @ourcrowd/dashboard dev` | Dashboard dev server on :3000 |
 | `pnpm --filter @ourcrowd/api eval` | Classification spot-check (see below) |
 | `pnpm --filter @ourcrowd/api schedule` | Long-running in-process daily scheduler |
+| `pnpm verify:data` | Cross-check the exported `data/` files against each other |
 | `pnpm test` | Unit tests |
 | `pnpm typecheck` | TypeScript across the workspace |
 
