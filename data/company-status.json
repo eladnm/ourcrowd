@@ -1,0 +1,3614 @@
+[
+  {
+    "companyId": "3d-signals",
+    "companyName": "3d Signals",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "aeye-health",
+    "companyName": "AEYE Health",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "abes-market",
+    "companyName": "Abes Market",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "air-ev",
+    "companyName": "Air EV",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "airobotics",
+    "companyName": "Airobotics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "alloy-therapeutics",
+    "companyName": "Alloy Therapeutics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "alpha-tau",
+    "companyName": "Alpha Tau",
+    "lastMentionedAt": "2026-09-08T11:32:25.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "amitree",
+    "companyName": "Amitree",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "anodot",
+    "companyName": "Anodot",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "anthropic",
+    "companyName": "Anthropic",
+    "lastMentionedAt": "2026-09-09T04:14:51.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 2,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "appdome",
+    "companyName": "Appdome",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "appforma",
+    "companyName": "Appforma",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "apploi",
+    "companyName": "Apploi",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "arbe-robotics",
+    "companyName": "Arbe Robotics",
+    "lastMentionedAt": "2026-09-08T17:42:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 7,
+    "sentimentBreakdown": {
+      "positive": 6,
+      "negative": 1,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "argus-cyber-security",
+    "companyName": "Argus Cyber Security",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "arrow-global",
+    "companyName": "Arrow Global",
+    "lastMentionedAt": "2026-09-08T14:16:56.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "astra",
+    "companyName": "Astra",
+    "lastMentionedAt": "2026-09-08T03:52:46.000Z",
+    "daysSinceLastMention": 1,
+    "status": "active",
+    "label": "last mentioned yesterday",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "atlas-obscura",
+    "companyName": "Atlas Obscura",
+    "lastMentionedAt": "2026-09-08T14:09:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "autobrains",
+    "companyName": "Autobrains",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ayar-labs",
+    "companyName": "Ayar Labs",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "biscience",
+    "companyName": "BIScience",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "barcode-nanotech",
+    "companyName": "Barcode Nanotech",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "beetlesat",
+    "companyName": "BeetleSat",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "betterseeds",
+    "companyName": "BetterSeeds",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "beyond-meat",
+    "companyName": "Beyond Meat",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "billguard",
+    "companyName": "BillGuard",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "binah-ai",
+    "companyName": "Binah.ai",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "biocatch",
+    "companyName": "BioCatch",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "biolumic",
+    "companyName": "BioLumic",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "biolojic-design",
+    "companyName": "Biolojic Design",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bites",
+    "companyName": "Bites",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bizzabo",
+    "companyName": "Bizzabo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bluecircle",
+    "companyName": "BlueCircle",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bluegreen-water-technologies",
+    "companyName": "BlueGreen Water Technologies",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bluenalu",
+    "companyName": "BlueNalu",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "bluetree-technologies",
+    "companyName": "BlueTree Technologies",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "boatsetter",
+    "companyName": "Boatsetter",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "brainq-technologies",
+    "companyName": "BrainQ Technologies",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "briefcam",
+    "companyName": "BriefCam",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "brightinsight",
+    "companyName": "BrightInsight",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "c2a-security",
+    "companyName": "C2A Security",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cb4",
+    "companyName": "CB4",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cardekho",
+    "companyName": "CarDekho",
+    "lastMentionedAt": "2026-09-08T11:04:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    }
+  },
+  {
+    "companyId": "carrar",
+    "companyName": "Carrar",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "casper",
+    "companyName": "Casper",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "celeno",
+    "companyName": "Celeno",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cerebras",
+    "companyName": "Cerebras",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cimagine",
+    "companyName": "Cimagine",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "classiq",
+    "companyName": "Classiq",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "clinch",
+    "companyName": "Clinch",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cognigo",
+    "companyName": "Cognigo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "connected-energy",
+    "companyName": "Connected Energy",
+    "lastMentionedAt": "2026-09-08T06:39:04.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "consumer-physics",
+    "companyName": "Consumer Physics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cordio-medical",
+    "companyName": "Cordio Medical",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "corephotonics",
+    "companyName": "Corephotonics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "corractions",
+    "companyName": "CorrActions",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cropx",
+    "companyName": "CropX",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "crosswise",
+    "companyName": "Crosswise",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cyabra",
+    "companyName": "Cyabra",
+    "lastMentionedAt": "2026-09-08T16:16:16.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 3,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
+    }
+  },
+  {
+    "companyId": "cybermdx",
+    "companyName": "CyberMDX",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cyberx",
+    "companyName": "CyberX",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cycuity",
+    "companyName": "Cycuity",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cyfirma",
+    "companyName": "Cyfirma",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "cytoreason",
+    "companyName": "CytoReason",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "dailypay",
+    "companyName": "DailyPay",
+    "lastMentionedAt": "2026-09-08T17:20:04.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "dandelion-energy",
+    "companyName": "Dandelion Energy",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "databricks",
+    "companyName": "Databricks",
+    "lastMentionedAt": "2026-09-09T02:53:54.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 2,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "dataloop",
+    "companyName": "Dataloop",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "deepkeep",
+    "companyName": "DeepKeep",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "diagnostic-robotics",
+    "companyName": "Diagnostic Robotics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "dreamed-diabetes",
+    "companyName": "DreaMed Diabetes",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "edgybees",
+    "companyName": "Edgybees",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "edity-therapeutics",
+    "companyName": "Edity Therapeutics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "edunav",
+    "companyName": "EduNav",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "eko-health",
+    "companyName": "Eko Health",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "entangled-networks",
+    "companyName": "Entangled Networks",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "equipmentshare",
+    "companyName": "EquipmentShare",
+    "lastMentionedAt": "2026-09-09T02:47:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 3,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 2
+    }
+  },
+  {
+    "companyId": "fireblade",
+    "companyName": "Fireblade",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "firefly-neuroscience",
+    "companyName": "Firefly Neuroscience",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "flash-forest",
+    "companyName": "Flash Forest",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "flytrex",
+    "companyName": "Flytrex",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "foretellix",
+    "companyName": "Foretellix",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "freightos",
+    "companyName": "Freightos",
+    "lastMentionedAt": "2026-09-08T11:40:56.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "frontier-car-group",
+    "companyName": "Frontier Car Group",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "future-family",
+    "companyName": "Future Family",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "genopore",
+    "companyName": "Genopore",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "glean",
+    "companyName": "Glean",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "global-kinetics",
+    "companyName": "Global Kinetics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "greenlight",
+    "companyName": "Greenlight",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "groq",
+    "companyName": "Groq",
+    "lastMentionedAt": "2026-09-08T14:36:47.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "guild",
+    "companyName": "Guild",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "h2pro",
+    "companyName": "H2Pro",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "heqa-security",
+    "companyName": "HEQA Security",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "hailo",
+    "companyName": "Hailo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "harbinger-motors",
+    "companyName": "Harbinger Motors",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "harvey",
+    "companyName": "Harvey",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "honeybook",
+    "companyName": "HoneyBook",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "hub-security",
+    "companyName": "Hub Security",
+    "lastMentionedAt": "2026-09-08T20:33:10.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "iqm",
+    "companyName": "IQM",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "inziv",
+    "companyName": "InZiv",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "incredo",
+    "companyName": "Incredo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "innovalve",
+    "companyName": "Innovalve",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "innoviz",
+    "companyName": "Innoviz",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "insidetracker",
+    "companyName": "InsideTracker",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "insightec",
+    "companyName": "Insightec",
+    "lastMentionedAt": "2026-09-08T07:00:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "intuition-robotics",
+    "companyName": "Intuition Robotics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ironvest",
+    "companyName": "IronVest",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "island",
+    "companyName": "Island",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "itsmine",
+    "companyName": "ItsMine",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "jump-bikes",
+    "companyName": "JUMP Bikes",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "juganu",
+    "companyName": "Juganu",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "jumpcloud",
+    "companyName": "JumpCloud",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kando",
+    "companyName": "Kando",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kardome",
+    "companyName": "Kardome",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kemtai",
+    "companyName": "Kemtai",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kenna-security",
+    "companyName": "Kenna Security",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kini",
+    "companyName": "Kini",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "klook",
+    "companyName": "Klook",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kodiak-robotics",
+    "companyName": "Kodiak Robotics",
+    "lastMentionedAt": "2026-09-08T18:18:58.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "kryon-systems",
+    "companyName": "Kryon Systems",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "lambda",
+    "companyName": "Lambda",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "lano",
+    "companyName": "Lano",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "launchpad",
+    "companyName": "Launchpad",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "lemonade",
+    "companyName": "Lemonade",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "lifeward",
+    "companyName": "Lifeward",
+    "lastMentionedAt": "2026-09-08T13:08:21.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 4,
+    "sentimentBreakdown": {
+      "positive": 4,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "lightico",
+    "companyName": "Lightico",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "liquid-instruments",
+    "companyName": "Liquid Instruments",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "locusview",
+    "companyName": "Locusview",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ludeo",
+    "companyName": "Ludeo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "mst",
+    "companyName": "MST",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "magisto",
+    "companyName": "Magisto",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "maolac",
+    "companyName": "Maolac",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "masterclass",
+    "companyName": "MasterClass",
+    "lastMentionedAt": "2026-09-08T23:49:14.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 3,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
+    }
+  },
+  {
+    "companyId": "materialszone",
+    "companyName": "MaterialsZone",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "memed",
+    "companyName": "MeMed",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "medisafe",
+    "companyName": "Medisafe",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "mentad",
+    "companyName": "Mentad",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "mermade-seafoods",
+    "companyName": "Mermade Seafoods",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "migvax",
+    "companyName": "MigVax",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "momentis-surgical",
+    "companyName": "Momentis Surgical",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "moodify",
+    "companyName": "Moodify",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "morphisec",
+    "companyName": "Morphisec",
+    "lastMentionedAt": "2026-09-08T15:07:40.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    }
+  },
+  {
+    "companyId": "nt-tao",
+    "companyName": "NT-Tao",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "nanomedic",
+    "companyName": "Nanomedic",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "nanorep",
+    "companyName": "Nanorep",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "near",
+    "companyName": "Near",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "neolithics",
+    "companyName": "Neolithics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "netop",
+    "companyName": "NetOp",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "neureality",
+    "companyName": "NeuReality",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "neura",
+    "companyName": "Neura",
+    "lastMentionedAt": "2026-09-08T07:40:12.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "neverware",
+    "companyName": "Neverware",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "nextpeer",
+    "companyName": "Nextpeer",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "noobaa",
+    "companyName": "NooBaa",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "omnix-medical",
+    "companyName": "Omnix Medical",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "oncohost",
+    "companyName": "OncoHost",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "one-zero-digital-bank-ltd",
+    "companyName": "One Zero Digital Bank Ltd.",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "oneai",
+    "companyName": "OneAI",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "openevidence",
+    "companyName": "OpenEvidence",
+    "lastMentionedAt": "2026-09-08T14:51:06.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "orchard",
+    "companyName": "Orchard",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ordergroove",
+    "companyName": "Ordergroove",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "oriient",
+    "companyName": "Oriient",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "oshi",
+    "companyName": "Oshi",
+    "lastMentionedAt": "2026-09-08T01:31:10.000Z",
+    "daysSinceLastMention": 1,
+    "status": "active",
+    "label": "last mentioned yesterday",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "ossio",
+    "companyName": "Ossio",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "overtime",
+    "companyName": "Overtime",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "parko",
+    "companyName": "Parko",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "peak",
+    "companyName": "Peak",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "people-ai",
+    "companyName": "People.ai",
+    "lastMentionedAt": "2026-09-08T10:15:24.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 3,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
+    }
+  },
+  {
+    "companyId": "perception-point",
+    "companyName": "Perception Point",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "playsight",
+    "companyName": "PlaySight",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "polaris-quantum-biotech",
+    "companyName": "Polaris Quantum Biotech",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "powwow",
+    "companyName": "Powwow",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "privateer",
+    "companyName": "Privateer",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "profuse",
+    "companyName": "ProFuse",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "pulmone",
+    "companyName": "PulmOne",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "quai-md",
+    "companyName": "Quai.MD",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "quantum-machines",
+    "companyName": "Quantum Machines",
+    "lastMentionedAt": "2026-09-08T17:23:20.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "quidnet-energy",
+    "companyName": "Quidnet Energy",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ravin-ai",
+    "companyName": "Ravin AI",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "realview-imaging",
+    "companyName": "RealView Imaging",
+    "lastMentionedAt": "2026-09-08T11:45:08.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "remilk",
+    "companyName": "Remilk",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "repair-carbon",
+    "companyName": "RepAir Carbon",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "replay-technologies",
+    "companyName": "Replay Technologies",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "rewire",
+    "companyName": "Rewire",
+    "lastMentionedAt": "2026-09-08T15:27:39.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ride-vision",
+    "companyName": "Ride Vision",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ro",
+    "companyName": "Ro",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ssi",
+    "companyName": "SSI",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sanotize",
+    "companyName": "SaNOtize",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sayata",
+    "companyName": "Sayata",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "scale-ai",
+    "companyName": "Scale AI",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "scopio-labs",
+    "companyName": "Scopio Labs",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "seetree",
+    "companyName": "SeeTree",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "seetrue",
+    "companyName": "SeeTrue",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sense-education",
+    "companyName": "Sense Education",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sequentify",
+    "companyName": "Sequentify",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sfara",
+    "companyName": "Sfara",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "shield",
+    "companyName": "Shield",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "shopial",
+    "companyName": "Shopial",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sight-diagnostics",
+    "companyName": "Sight Diagnostics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "signals-analytics",
+    "companyName": "Signals Analytics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "silo",
+    "companyName": "Silo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "siteaware",
+    "companyName": "Siteaware",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "skillz",
+    "companyName": "Skillz",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sotero",
+    "companyName": "Sotero",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "spacex",
+    "companyName": "SpaceX",
+    "lastMentionedAt": "2026-09-08T16:39:00.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 3,
+    "sentimentBreakdown": {
+      "positive": 2,
+      "negative": 1,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "spectrum-labs",
+    "companyName": "Spectrum Labs",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "spot-ai",
+    "companyName": "Spot AI",
+    "lastMentionedAt": "2026-09-08T04:36:00.000Z",
+    "daysSinceLastMention": 1,
+    "status": "active",
+    "label": "last mentioned yesterday",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "stackiq",
+    "companyName": "StackIQ",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "stellar-cyber",
+    "companyName": "Stellar Cyber",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "stoke-space",
+    "companyName": "Stoke Space",
+    "lastMentionedAt": "2026-09-09T02:35:28.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 44,
+    "sentimentBreakdown": {
+      "positive": 42,
+      "negative": 1,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "stringify",
+    "companyName": "Stringify",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "stripe",
+    "companyName": "Stripe",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sufresca",
+    "companyName": "Sufresca",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "surgical-theater",
+    "companyName": "Surgical Theater",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "sweetch",
+    "companyName": "Sweetch",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "syqe",
+    "companyName": "Syqe",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tabnine",
+    "companyName": "Tabnine",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tailor-brands",
+    "companyName": "Tailor Brands",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tala",
+    "companyName": "Tala",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tamar-robotics",
+    "companyName": "Tamar Robotics",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "taranis",
+    "companyName": "Taranis",
+    "lastMentionedAt": "2026-09-08T18:05:01.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 1,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "techsee",
+    "companyName": "TechSee",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tensorwave",
+    "companyName": "TensorWave",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tevel",
+    "companyName": "Tevel",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "the-bouqs",
+    "companyName": "The Bouqs",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "the-every-company",
+    "companyName": "The EVERY Company",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "the-trendlines-group",
+    "companyName": "The Trendlines Group",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "thetaray",
+    "companyName": "ThetaRay",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "together-ai",
+    "companyName": "Together AI",
+    "lastMentionedAt": "2026-09-08T15:00:09.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 2,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    }
+  },
+  {
+    "companyId": "tovala",
+    "companyName": "Tovala",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "treedom",
+    "companyName": "Treedom",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "trusona",
+    "companyName": "Trusona",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "tubitv",
+    "companyName": "TubiTV",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "upnride",
+    "companyName": "UPnRIDE",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ubimo",
+    "companyName": "Ubimo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ukko",
+    "companyName": "Ukko",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "unispectral",
+    "companyName": "Unispectral",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ursa-major",
+    "companyName": "Ursa Major",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "vayavision",
+    "companyName": "VAYAVISION",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "velotix",
+    "companyName": "Velotix",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "verse-ai",
+    "companyName": "Verse.ai",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "viewbix",
+    "companyName": "Viewbix",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "virgin-hyperloop-one",
+    "companyName": "Virgin Hyperloop One",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "wave",
+    "companyName": "Wave",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "wayup",
+    "companyName": "Wayup",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "workspot",
+    "companyName": "Workspot",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "xage-security",
+    "companyName": "Xage Security",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "xsense",
+    "companyName": "Xsense",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "ynsect",
+    "companyName": "Ynsect",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "yulife",
+    "companyName": "YuLife",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "zebra-medical-vision",
+    "companyName": "Zebra Medical Vision",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "zippin",
+    "companyName": "Zippin",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "zoomcar",
+    "companyName": "Zoomcar",
+    "lastMentionedAt": "2026-09-08T10:03:01.000Z",
+    "daysSinceLastMention": 0,
+    "status": "active",
+    "label": "last mentioned today",
+    "quarterMentionCount": 1,
+    "sentimentBreakdown": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "zutacore",
+    "companyName": "ZutaCore",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "evigilo",
+    "companyName": "eVigilo",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "enverid",
+    "companyName": "enVerid",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "mprest",
+    "companyName": "mPrest",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "wefox",
+    "companyName": "wefox",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  },
+  {
+    "companyId": "xai",
+    "companyName": "xAI",
+    "lastMentionedAt": null,
+    "daysSinceLastMention": null,
+    "status": "none",
+    "label": "no coverage found",
+    "quarterMentionCount": 0,
+    "sentimentBreakdown": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0
+    }
+  }
+]

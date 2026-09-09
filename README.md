@@ -347,13 +347,22 @@ Output of a real run, committed for review:
 
 **Known limitations**
 
-- **Not every collected mention in `data/` is classified.** The full quarter
-  returned 4,895 mentions; at ~11.5 s each on `llama3.1:8b` that is ~15 hours.
-  The committed run labels the **last 30 days** and leaves older mentions
-  collected but unlabelled. They are stored and will be picked up by
-  `pnpm classify` with no window. This is a runtime constraint, not a
-  correctness one — the dashboard counts only classified mentions, so quarter
-  totals for older weeks understate reality.
+- **Collection covers the full quarter; classification does not.**
+  Collection is complete: **all 4,895 mentions across all 258 companies** for
+  the trailing 90 days are stored, with source URLs and publication dates.
+  Classification is the bottleneck — `llama3.1:8b` on CPU runs at roughly
+  **12 seconds per mention**, so labelling the full quarter is ~16 hours of
+  compute. The committed run therefore labels the **most recent window** and
+  leaves older mentions collected but unlabelled.
+
+  `data/run-summary.json` records exactly how many were labelled. Nothing is
+  lost: unlabelled mentions sit in the database and `pnpm classify` (with no
+  `--since`) picks up where it stopped.
+
+  This is a throughput limit, not a correctness one — but it does mean **quarter
+  totals for the older weeks understate reality**, because the dashboard counts
+  only classified mentions. On a machine with a GPU, or with a smaller model
+  (`OLLAMA_MODEL=qwen2.5:3b`), the full quarter is comfortably achievable.
 - **Classification quality is spot-checked, not measured.** The fixture set is
   ten hand-written cases, and the prompt was tuned against them — so the 10/10
   is a regression check, not an accuracy figure. No labelled set of real
