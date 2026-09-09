@@ -12,3 +12,4 @@ dist/
 *.db-wal
 *.db-shm
 classify-30d.log
+*.tsbuildinfo
