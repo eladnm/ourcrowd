@@ -14,6 +14,66 @@ if (!source) {
   process.exit(1);
 }
 
+/**
+ * Sectors for the companies whose names collide with common words, TV shows or
+ * other businesses. The classifier uses sector as its strongest disambiguation
+ * signal, so these are the entries where it earns its keep. Left blank for
+ * unambiguous names rather than guessing across all 258.
+ */
+const SECTORS = {
+  Shield: 'fintech compliance software',
+  Peak: 'AI decision intelligence',
+  Near: 'location data intelligence',
+  Silo: 'produce supply-chain technology',
+  Wave: 'financial technology',
+  Orchard: 'real estate technology',
+  Guild: 'corporate education benefits',
+  Astra: 'space launch vehicles',
+  Privateer: 'space situational awareness',
+  Launchpad: 'startup operations platform',
+  Overtime: 'sports media',
+  Greenlight: 'family banking app',
+  Casper: 'consumer sleep products',
+  Bites: 'mobile microlearning',
+  Moodify: 'scent technology',
+  Klook: 'travel experience booking',
+  Tala: 'emerging-market lending',
+  Ro: 'telehealth',
+  Island: 'enterprise browser security',
+  Harvey: 'legal AI',
+  Glean: 'enterprise search',
+  Kini: 'consumer technology',
+  Sotero: 'data security',
+  Ukko: 'food allergy protein engineering',
+  Carrar: 'EV battery thermal management',
+  Zippin: 'checkout-free retail',
+  Clinch: 'personalized advertising',
+  Neura: 'AI infrastructure',
+  Sweetch: 'digital health',
+  Powwow: 'enterprise mobility',
+  Mentad: 'digital advertising',
+  Parko: 'parking technology',
+  Shopial: 'social commerce',
+  Wayup: 'early-career recruiting',
+  Nanorep: 'customer service automation',
+  Celeno: 'wireless semiconductors',
+  Kemtai: 'virtual physiotherapy',
+  NetOp: 'network automation',
+  Sfara: 'driver safety technology',
+  Treedom: 'reforestation',
+  Ynsect: 'insect protein',
+  wefox: 'digital insurance',
+  Skillz: 'mobile games platform',
+  MST: 'medical technology',
+  Bizzabo: 'event management software',
+  Verse: 'conversational marketing',
+  Lano: 'global payroll',
+  Groq: 'AI inference chips',
+  Tovala: 'smart cooking appliances',
+  Remilk: 'precision fermentation dairy',
+  Shield: 'fintech compliance software',
+};
+
 /** Companies whose plain name is too ambiguous to search for on its own. */
 const DISAMBIGUATION = {
   Shield: 'Shield fintech compliance',
@@ -121,6 +181,7 @@ for (const line of lines) {
     ...(domain ? { domain } : {}),
     // searchQuery overrides the default `"<name>"` query when the bare name
     // is a common English word and would drown the feed in noise.
+    ...(SECTORS[name] ? { sector: SECTORS[name] } : {}),
     ...(DISAMBIGUATION[name] ? { searchQuery: DISAMBIGUATION[name] } : {}),
   });
 }
@@ -131,4 +192,5 @@ writeFileSync(
 );
 console.log(`wrote data/companies.json with ${companies.length} companies`);
 console.log(`  ${companies.filter((c) => c.aliases).length} with aliases`);
+console.log(`  ${companies.filter((c) => c.sector).length} with a sector for disambiguation`);
 console.log(`  ${companies.filter((c) => c.searchQuery).length} with disambiguated search queries`);

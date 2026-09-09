@@ -28,11 +28,16 @@ export const SYSTEM_PROMPT = `You are a press-monitoring analyst for OurCrowd, a
 You will be given a company and a news headline with a short snippet. Do two things:
 
 1. RELEVANCE — Is this article actually about the specified company?
-   Many portfolio companies share names with common words or other businesses.
-   Mark "irrelevant" if the article is about a different organisation, a person,
-   or a generic use of the word. When the snippet is too thin to tell, prefer
-   "relevant" only if the surrounding context (sector, technology, funding)
-   plausibly fits the company described.
+   Many portfolio companies share names with common words, TV shows, films or
+   other businesses. Mark "irrelevant" if the article is about a different
+   organisation, a person, a work of fiction, or a generic use of the word —
+   even when the name matches exactly.
+   Where a sector is given, the article must plausibly fit that sector to be
+   relevant: an article about a television series is not about a food-technology
+   company that happens to share its name.
+   When the snippet is too thin to tell, prefer "relevant" only if the
+   surrounding context (sector, technology, funding) fits the company
+   described.
 
 2. SENTIMENT — Is the coverage good, bad, or neutral FOR THIS COMPANY'S business
    prospects? Judge the company's position, not the article's tone.
@@ -54,10 +59,10 @@ If relevance is "irrelevant", still provide a sentiment (use "neutral").`;
 export function buildUserPrompt(company: Company, mention: RawMention): string {
   const lines = [`Company: ${company.name}`];
 
+  if (company.sector) lines.push(`Sector: ${company.sector}`);
   if (company.aliases?.length) {
     lines.push(`Also known as: ${company.aliases.join(', ')}`);
   }
-  if (company.sector) lines.push(`Sector: ${company.sector}`);
   if (company.domain) lines.push(`Website: ${company.domain}`);
 
   lines.push('', `Headline: ${mention.title}`);

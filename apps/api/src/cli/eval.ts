@@ -46,7 +46,7 @@ const CASES: EvalCase[] = [
     note: 'funding round — the most common positive case',
   },
   {
-    company: { id: 'skillz', name: 'Skillz' },
+    company: { id: 'skillz', name: 'Skillz', sector: 'mobile games platform' },
     title: 'Skillz faces class-action lawsuit over alleged misleading disclosures',
     snippet: 'Shareholders claim the company overstated user engagement metrics.',
     expectedSentiment: 'negative',
@@ -78,7 +78,7 @@ const CASES: EvalCase[] = [
     note: 'upbeat tone about someone else — bad for THIS company; the trap case',
   },
   {
-    company: { id: 'shield', name: 'Shield', searchQuery: 'Shield fintech compliance' },
+    company: { id: 'shield', name: 'Shield', sector: 'fintech compliance software' },
     title: 'Marvel announces new S.H.I.E.L.D. series for Disney+',
     snippet: 'The streaming series will explore the agency origins.',
     expectedSentiment: 'neutral',
@@ -86,7 +86,7 @@ const CASES: EvalCase[] = [
     note: 'name collision — must be filtered out',
   },
   {
-    company: { id: 'silo', name: 'Silo', searchQuery: 'Silo produce technology' },
+    company: { id: 'silo', name: 'Silo', sector: 'produce supply-chain technology' },
     title: 'Apple TV+ renews Silo for a third season',
     snippet: 'The dystopian drama has been a critical success for the streamer.',
     expectedSentiment: 'neutral',

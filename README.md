@@ -195,14 +195,37 @@ The cases deliberately cover the decisions that are easy to get wrong:
 - **name collisions that must be filtered** (Marvel's S.H.I.E.L.D. for "Shield",
   the Apple TV+ series for "Silo")
 
-Alongside that, mentions from the real run were spot-checked by hand. The
-relevance filter behaved sensibly — for example it correctly marked a general
+**Result: 10/10 relevance, 10/10 sentiment** on the current prompt — but read
+that number with the caveat below.
+
+The first run scored **9/10 on both**. The single miss is the interesting part:
+the model correctly filtered Marvel's S.H.I.E.L.D. for "Shield" but accepted the
+Apple TV+ series for "Silo" as genuine company news. The prompt had no way to
+tell them apart, because it was given only a name.
+
+Two changes followed, and both are in the shipped code:
+
+1. The prompt now states that a work of fiction sharing a company's name is not
+   coverage of that company, and that a given sector must plausibly fit.
+2. `sector` was added for the 49 companies with collision-prone names and is
+   passed to the model as its strongest disambiguation signal.
+
+The model's reasoning on the retry shows it working: *"TV show renewal unrelated
+to produce supply-chain technology company"* (confidence 1.00).
+
+**Caveat: the prompt was tuned after seeing that failure, so 10/10 on the same
+ten cases is not an independent measurement.** It shows the fix works on the
+case that motivated it, not that accuracy is 100%. A real evaluation needs a
+held-out set of hand-labelled *real* articles, which does not exist here.
+
+Alongside the fixture set, mentions from the live run were spot-checked by hand.
+The relevance filter behaved sensibly — for example it correctly marked a general
 "When the AI Breaks Its Own Rules" article as *irrelevant* to Morphisec while
 keeping two genuine Morphisec security posts as relevant and neutral.
 
-**This is a sanity check, not a benchmark.** Ten cases and an informal read of
-the output tell you the prompt is behaving; they do not give you a defensible
-accuracy figure. See the limitations below.
+**This is a sanity check, not a benchmark.** Ten fixture cases and an informal
+read of real output tell you the prompt is behaving; they do not give you a
+defensible accuracy figure.
 
 ---
 
@@ -303,8 +326,10 @@ Output of a real run, committed for review:
   useful for a monitoring dashboard that runs continuously.
 - Status thresholds: active ≤ 7d, recent ≤ 30d, stale ≤ 90d, dormant > 90d.
 - The seed list is names only. Where a name was ambiguous, a `searchQuery`
-  override was added by hand (53 of 258); parentheticals like
-  "Ludeo (formerly Edge)" became aliases (11) and are searched and shown.
+  override (53 of 258) and a `sector` (49 of 258) were added by hand;
+  parentheticals like "Ludeo (formerly Edge)" became aliases (11) and are both
+  searched and shown. Sectors were not researched for the other ~200 companies,
+  so those rely on the name alone.
 - An article mentioning two portfolio companies counts once for each.
 
 **Trade-offs**
@@ -329,8 +354,10 @@ Output of a real run, committed for review:
   `pnpm classify` with no window. This is a runtime constraint, not a
   correctness one — the dashboard counts only classified mentions, so quarter
   totals for older weeks understate reality.
-- **Classification quality is spot-checked, not measured.** No labelled test set
-  of real articles exists, so there is no accuracy figure to quote.
+- **Classification quality is spot-checked, not measured.** The fixture set is
+  ten hand-written cases, and the prompt was tuned against them — so the 10/10
+  is a regression check, not an accuracy figure. No labelled set of real
+  articles exists here.
 - **Headline-only input caps accuracy.** See the RSS limitations above.
 - **No authentication.** The dashboard is read-only and assumes a trusted
   network. The boilerplate this was derived from had Clerk auth; it was stripped
