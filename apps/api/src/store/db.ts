@@ -21,7 +21,7 @@ export function getDb(): DatabaseSync {
   db = new DatabaseSync(config.databasePath);
   db.exec('PRAGMA journal_mode = WAL');
   db.exec('PRAGMA foreign_keys = ON');
-  migrate(db);
+  runMigrations(db);
   return db;
 }
 
@@ -29,7 +29,7 @@ export function getDb(): DatabaseSync {
 export function useInMemoryDb(): DatabaseSync {
   db = new DatabaseSync(':memory:');
   db.exec('PRAGMA foreign_keys = ON');
-  migrate(db);
+  runMigrations(db);
   return db;
 }
 
@@ -38,7 +38,7 @@ export function closeDb(): void {
   db = null;
 }
 
-function migrate(database: DatabaseSync): void {
+export function runMigrations(database: DatabaseSync): void {
   database.exec(`
     CREATE TABLE IF NOT EXISTS companies (
       id TEXT PRIMARY KEY,
@@ -88,6 +88,35 @@ function migrate(database: DatabaseSync): void {
       notes TEXT
     );
   `);
+
+  addMissingColumns(database);
+}
+
+/**
+ * Columns added after the first release.
+ *
+ * `CREATE TABLE IF NOT EXISTS` is a no-op against a database that already
+ * exists, so a new column in the schema above would never reach anyone's
+ * existing `press.db` — they would just get "no such column" at query time.
+ * SQLite has no `ADD COLUMN IF NOT EXISTS`, so check the live schema instead.
+ */
+function addMissingColumns(database: DatabaseSync): void {
+  const expected: Record<string, Record<string, string>> = {
+    companies: { ticker: 'TEXT' },
+  };
+
+  for (const [table, columns] of Object.entries(expected)) {
+    const existing = new Set(
+      (database.prepare(`PRAGMA table_info(${table})`).all() as unknown as { name: string }[]).map(
+        (row) => row.name,
+      ),
+    );
+    for (const [column, type] of Object.entries(columns)) {
+      if (!existing.has(column)) {
+        database.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
+      }
+    }
+  }
 }
 
 /**
@@ -247,7 +276,12 @@ function toRawMention(row: MentionRow): RawMention {
  * time-boxed first run both narrow the window here rather than in the caller.
  */
 export function getUnclassifiedMentions(
-  options: { limit?: number; sinceDays?: number; companyIds?: string[] } = {},
+  options: {
+    limit?: number;
+    sinceDays?: number;
+    companyIds?: string[];
+    mentionIds?: string[];
+  } = {},
 ): RawMention[] {
   const clauses = ['sentiment IS NULL'];
   const params: unknown[] = [];
@@ -255,6 +289,14 @@ export function getUnclassifiedMentions(
   if (options.sinceDays !== undefined) {
     clauses.push('published_at >= ?');
     params.push(new Date(Date.now() - options.sinceDays * 86_400_000).toISOString());
+  }
+
+  // Scoping to explicit ids is what makes `--relabel` mean "redo these",
+  // rather than "redo these and also everything else still pending".
+  if (options.mentionIds !== undefined) {
+    if (options.mentionIds.length === 0) return [];
+    clauses.push(`id IN (${options.mentionIds.map(() => '?').join(', ')})`);
+    params.push(...options.mentionIds);
   }
 
   // Scoping to companies keeps `pipeline --limit N` honest: without it a
@@ -334,6 +376,57 @@ export function markAlerted(ids: string[], at: string): void {
   transaction(database, () => {
     for (const id of ids) stmt.run(at, id);
   });
+}
+
+/**
+ * Clear classification labels so the next `classify` run reconsiders them.
+ *
+ * Needed when the prompt or a company's context changes: a label produced by
+ * an older prompt is not wrong exactly, but it was decided on less
+ * information. `onlyWithContext` narrows this to companies that have since
+ * gained a sector or ticker — the cases where re-asking can actually change
+ * the answer — so a prompt tweak does not force a full re-run.
+ *
+ * Returns the ids that were unlabelled, so the caller can re-classify exactly
+ * those instead of sweeping up the entire pending backlog.
+ */
+export function clearClassifications(
+  options: { before?: string; onlyWithContext?: boolean } = {},
+): string[] {
+  const clauses = ['sentiment IS NOT NULL'];
+  const params: unknown[] = [];
+
+  if (options.before) {
+    clauses.push('classified_at < ?');
+    params.push(options.before);
+  }
+  if (options.onlyWithContext) {
+    clauses.push(
+      'company_id IN (SELECT id FROM companies WHERE ticker IS NOT NULL OR sector IS NOT NULL)',
+    );
+  }
+
+  const database = getDb();
+  const where = clauses.join(' AND ');
+
+  // Capture the ids first: once the labels are gone the predicate no longer
+  // identifies them.
+  const ids = (
+    database.prepare(`SELECT id FROM mentions WHERE ${where}`).all(...(params as never[])) as unknown as {
+      id: string;
+    }[]
+  ).map((row) => row.id);
+
+  database
+    .prepare(
+      `UPDATE mentions
+       SET sentiment = NULL, relevance = NULL, confidence = NULL,
+           reasoning = NULL, model = NULL, classified_at = NULL
+       WHERE ${where}`,
+    )
+    .run(...(params as never[]));
+
+  return ids;
 }
 
 export function startRun(kind: string): number {

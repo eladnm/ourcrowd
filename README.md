@@ -89,7 +89,7 @@ mentions, labels and per-company status without running anything.
 | `pnpm pipeline` | Collect → classify → export, end to end |
 | `pnpm pipeline -- --since 30` | Same, but only label coverage from the last 30 days |
 | `pnpm collect` | Collect only. `--days 90`, `--limit 10` |
-| `pnpm classify` | Label pending mentions. `--since 30`, `--limit 20` |
+| `pnpm classify` | Label pending mentions. `--since 30`, `--limit 20`, `--relabel` |
 | `pnpm alert` | The daily job: collect 2 days, classify, alert. `--dry-run` |
 | `pnpm export` | Rewrite `data/*.json` and `data/*.csv` from the database |
 | `pnpm api` | Serve the API + built dashboard on :4000 |
@@ -103,6 +103,20 @@ mentions, labels and per-company status without running anything.
 Both `collect` and `classify` are **resumable**. Results are written as they
 land, deduped by mention id, so an interrupted run loses nothing and re-running
 picks up where it stopped.
+
+**Re-labelling after a prompt change.** A label reflects the prompt and the
+company context that existed when it was produced. When either changes, redo
+the affected labels rather than the entire backlog:
+
+```bash
+pnpm classify -- --relabel        # companies that have since gained sector/ticker
+pnpm classify -- --relabel-all    # every label, when the prompt itself changed
+pnpm classify -- --relabel --relabel-before 2026-09-09T06:20:00Z
+```
+
+`--relabel` clears the labels and then classifies **exactly** what it cleared —
+it will not drag the rest of the pending backlog along with it. The collected
+mentions themselves are never touched, so nothing is re-fetched.
 
 ---
 
@@ -401,9 +415,9 @@ Output of a real run, committed for review:
   1 clear false negative in 153 filtered items (~0.7%); the other name-mismatch
   rejections sampled were correct. Companies now carry a `ticker` (19 of the
   258 listed ones), the prompt states that ticker-only coverage counts, and
-  both are covered by regression tests. **Mentions classified before this fix
-  are still labelled under the old prompt** — re-run `pnpm classify` after
-  clearing labels if you want them reconsidered.
+  both are covered by regression tests. Mentions labelled before this fix were
+  re-classified with `pnpm classify -- --relabel`, which redoes exactly the
+  affected labels.
 - **Roughly 40% of collected mentions are filtered as irrelevant.** That is
   high but expected given ~50 common-word company names; the filtered rows are
   kept and shown dimmed so the decision can be audited.
