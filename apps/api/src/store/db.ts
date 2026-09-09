@@ -243,7 +243,7 @@ function toRawMention(row: MentionRow): RawMention {
  * time-boxed first run both narrow the window here rather than in the caller.
  */
 export function getUnclassifiedMentions(
-  options: { limit?: number; sinceDays?: number } = {},
+  options: { limit?: number; sinceDays?: number; companyIds?: string[] } = {},
 ): RawMention[] {
   const clauses = ['sentiment IS NULL'];
   const params: unknown[] = [];
@@ -251,6 +251,14 @@ export function getUnclassifiedMentions(
   if (options.sinceDays !== undefined) {
     clauses.push('published_at >= ?');
     params.push(new Date(Date.now() - options.sinceDays * 86_400_000).toISOString());
+  }
+
+  // Scoping to companies keeps `pipeline --limit N` honest: without it a
+  // limited collection would still classify the entire stored backlog.
+  if (options.companyIds !== undefined) {
+    if (options.companyIds.length === 0) return [];
+    clauses.push(`company_id IN (${options.companyIds.map(() => '?').join(', ')})`);
+    params.push(...options.companyIds);
   }
 
   let sql = `SELECT * FROM mentions WHERE ${clauses.join(' AND ')} ORDER BY published_at DESC`;

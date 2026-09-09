@@ -105,3 +105,19 @@ test('upserting a company updates it rather than duplicating it', () => {
   upsertCompanies([{ id: 'acme', name: 'Acme Corporation', aliases: ['Acme Inc'] }]);
   assert.equal(getStats().companies, 1);
 });
+
+test('classification can be scoped to specific companies', () => {
+  upsertCompanies([
+    { id: 'acme', name: 'Acme' },
+    { id: 'globex', name: 'Globex' },
+  ]);
+  insertMentions([mention('a'), mention('g', { companyId: 'globex' })]);
+
+  const scoped = getUnclassifiedMentions({ companyIds: ['globex'] });
+  assert.deepEqual(scoped.map((m) => m.id), ['g']);
+});
+
+test('an empty company scope matches nothing rather than everything', () => {
+  insertMentions([mention('a')]);
+  assert.deepEqual(getUnclassifiedMentions({ companyIds: [] }), []);
+});

@@ -37,8 +37,8 @@ ollama pull llama3.1:8b
 # 2. Install dependencies
 pnpm install
 
-# 3. Run the pipeline: collect the quarter, classify the last 30 days, export
-pnpm pipeline -- --since 30
+# 3. Smoke test — 5 companies, end to end, about 2 minutes
+pnpm pipeline -- --limit 5 --since 7
 
 # 4. Build and serve the dashboard
 pnpm --filter @ourcrowd/dashboard build
@@ -47,6 +47,33 @@ pnpm api                # http://localhost:4000
 
 No API keys, no database server, no `.env` file required — every setting has a
 working default. `apps/api/.env.example` documents the knobs.
+
+### Running it for real
+
+Step 3 above is deliberately small so you can confirm the pipeline works before
+committing time to it. The full run is two very differently priced halves:
+
+| Step | Scope | Roughly |
+| --- | --- | --- |
+| `pnpm collect` | 258 companies, 90 days, ~4,900 mentions | **~7 minutes** |
+| `pnpm classify -- --since 7` | last week's coverage | **~1.5 hours** |
+| `pnpm classify -- --since 30` | last month's coverage | **~5.5 hours** |
+| `pnpm classify` | the whole quarter | **~16 hours** |
+
+Collection is fast; **classification is the bottleneck** — `llama3.1:8b` on CPU
+runs at roughly 12 seconds per mention, and the requirement is a *local* model.
+Those figures are from an 8-core laptop with no GPU; a GPU or a smaller model
+(`OLLAMA_MODEL=qwen2.5:3b`) cuts them substantially.
+
+Classification is **resumable and idempotent**, so the sane way to run it is to
+collect once and then let the classifier chip away:
+
+```bash
+pnpm collect                    # ~7 min, gets the whole quarter
+pnpm classify -- --since 7      # start with the most recent week
+pnpm classify                   # later, extend to everything else
+pnpm export                     # refresh data/ whenever you like
+```
 
 ### Just want to look at the results?
 

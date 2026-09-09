@@ -40,7 +40,12 @@ export async function runCollect(options: { days?: number; limit?: number } = {}
   log.info(`  duplicates: ${mentions.length - inserted}`);
   if (errors.length) log.warn(`  failed:     ${errors.length} companies`);
 
-  return { found: mentions.length, inserted, errors: errors.length };
+  return {
+    found: mentions.length,
+    inserted,
+    errors: errors.length,
+    companyIds: targets.map((c) => c.id),
+  };
 }
 
 if (import.meta.filename === process.argv[1]) {

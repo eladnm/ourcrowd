@@ -20,7 +20,9 @@ import {
   startRun,
 } from '../store/db.ts';
 
-export async function runClassify(options: { limit?: number; sinceDays?: number } = {}) {
+export async function runClassify(
+  options: { limit?: number; sinceDays?: number; companyIds?: string[] } = {},
+) {
   const health = await checkOllama();
   if (!health.ok) {
     log.error('Ollama is not ready:\n' + health.message);
@@ -31,6 +33,7 @@ export async function runClassify(options: { limit?: number; sinceDays?: number 
   const pending = getUnclassifiedMentions({
     limit: options.limit,
     sinceDays: options.sinceDays,
+    companyIds: options.companyIds,
   });
   if (pending.length === 0) {
     log.info('Nothing to classify — every stored mention already has a label.');
